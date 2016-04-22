@@ -10,21 +10,23 @@ import java.util.*;
 class Test {
 
     public static void main(String... args) {
-        //insertProvider();
-        //insertCategory();
-        //insertGame();
-        //insertStore();
-        //insertStoreProduct();
-        //insertPosition();
-        //insertStaff();
-       // insertCustomer();
+//        insertProvider();
+//        insertCategory();
+//        insertGame();
+//        insertStore();
+//        insertStoreProduct();
+//        insertPosition();
+//        insertStaff();
+//        insertCustomer();
+      //  testInsertOrder();
+        tryGetOrder();
     }
     private static void tryGetOrder() {
         Staff staff = StaffDAO.getByUsername("Raymond");
         System.out.println("Got Staff " + staff.getStaffName());
         Customer customer = CustomerDAO.getByUsername("Mary");
         System.out.println("Got Customer " + customer.getCusName());
-        List<Storeproduct> storeProducts = StoreProductDAO.getByStoreAndProduct(1, 1);
+        List<Storeproduct> storeProducts = StoreProductDAO.getByStoreAndProduct(11, 21);
         System.out.println("Got SP " + storeProducts.get(0).getProduct().getProductName());
         System.out.println(customer.getCusorders().get(0).getCustomer().getCusName());
 
@@ -34,7 +36,7 @@ class Test {
         System.out.println("Got Staff " + staff.getStaffName());
         Customer customer = CustomerDAO.getByUsername("Mary");
         System.out.println("Got Customer " + customer.getCusName());
-        List<Storeproduct> storeProducts = StoreProductDAO.getByStoreAndProduct(1, 1);
+        List<Storeproduct> storeProducts = StoreProductDAO.getByStoreAndProduct(11, 21);
         System.out.println("Got SP " + storeProducts.get(0).getProduct().getProductName());
         Cusorder cusorder = new Cusorder();
         cusorder.setCustomer(customer);

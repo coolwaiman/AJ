@@ -16,7 +16,7 @@ public class DAO<T> {
         return s;
     }
     public static boolean save(Object object) {
-        if(s == null) getSession();
+        if(s == null || !s.isConnected()) getSession();
         try {
             s.beginTransaction();
             s.save(object);
@@ -30,7 +30,7 @@ public class DAO<T> {
     }
 
     public static boolean update(Object object) {
-        if(s == null) getSession();
+        if(s == null || !s.isConnected()) getSession();
         try {
             s.beginTransaction();
             s.update(object);
