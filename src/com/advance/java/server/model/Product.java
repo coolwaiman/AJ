@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -14,7 +11,7 @@ public class Product {
     private String productName;
     private String productDescription;
     private double productPrice;
-    private int categoryId;
+    private Category category;
     private int providerId;
 
     @Id
@@ -57,14 +54,14 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    @Basic
-    @Column(name = "CategoryId", nullable = false)
-    public int getCategoryId() {
-        return categoryId;
+    @ManyToOne
+    @JoinColumn(name = "CategoryId", nullable = false)
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     @Basic
@@ -86,7 +83,7 @@ public class Product {
 
         if (productId != product.productId) return false;
         if (Double.compare(product.productPrice, productPrice) != 0) return false;
-        if (categoryId != product.categoryId) return false;
+        if (category != product.category) return false;
         if (providerId != product.providerId) return false;
         if (productName != null ? !productName.equals(product.productName) : product.productName != null) return false;
         if (productDescription != null ? !productDescription.equals(product.productDescription) : product.productDescription != null)
@@ -104,7 +101,7 @@ public class Product {
         result = 31 * result + (productDescription != null ? productDescription.hashCode() : 0);
         temp = Double.doubleToLongBits(productPrice);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + categoryId;
+        result = 31 * result + category.hashCode();
         result = 31 * result + providerId;
         return result;
     }

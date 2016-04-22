@@ -3,20 +3,27 @@ package com.advance.java.server;
 import com.advance.java.server.model.Category;
 import com.advance.java.server.model.Product;
 import org.hibernate.Session;
+import java.util.PropertyResourceBundle;
+import java.io.*;
+import java.nio.Buffer;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.concurrent.*;
 
-import java.util.ArrayList;
+class Test {
 
-/**
- * Created by rAYMOND on 4/22/2016.
- */
-public class Test {
-    public static void main(String... args) {
-        //insertCategory();
-        insertProvider();
-        insertGame();
+    class Point {
+
     }
 
-    private static void insertGame() {
+    public static void main(String... args) throws ExecutionException, InterruptedException, IOException {
+
+    }
+
+
+
+    private void insertGame() throws ExecutionException, InterruptedException {
     }
 
     private static void insertProvider() {
