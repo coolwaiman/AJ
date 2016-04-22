@@ -17,6 +17,7 @@ import java.net.Socket;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.RunnableFuture;
 
 /**
  *
@@ -52,8 +53,16 @@ public class RequestingClient implements Runnable, ConnectionSubject {
                 Thread.sleep(500);
             } catch (InterruptedException ex) {
             }
-            
-            System.out.print(doRead(in));
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while(true) {
+                        try {
+                            System.out.print(doRead(in));
+                        }catch (IOException e){}
+                    }
+                }
+            }).start();
             String userInput;
             while ((userInput = stdIn.readLine()) != null) {
                 out.println(userInput);
@@ -63,7 +72,6 @@ public class RequestingClient implements Runnable, ConnectionSubject {
                 } catch (InterruptedException ex) {
                 }
 
-                System.out.print(doRead(in));
             }
         } catch (IOException e) {
             e.printStackTrace();
