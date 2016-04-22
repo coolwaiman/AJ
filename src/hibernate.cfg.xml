@@ -6,9 +6,9 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://localhost:3306/advdb</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.show_sql">true</property>
-
+    <property name="hibernate.show_sql">false</property>
     <property name="connection.username">root</property>
+
     <mapping class="com.advance.java.server.model.Product"/>
     <mapping class="com.advance.java.server.model.Category"/>
     <mapping class="com.advance.java.server.model.Provider"/>
@@ -22,6 +22,7 @@
     <mapping class="com.advance.java.server.model.Technician"/>
     <mapping class="com.advance.java.server.model.Storestockwarning"/>
     <mapping class="com.advance.java.server.model.Productrepairwork"/>
+    <mapping class="com.advance.java.server.model.Position"/>
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->
   </session-factory>

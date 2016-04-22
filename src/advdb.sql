@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2016 at 05:55 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.5.34
+-- Generation Time: Apr 22, 2016 at 12:31 PM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -79,7 +79,8 @@ CREATE TABLE `customer` (
   `CusAddress` varchar(255) DEFAULT NULL,
   `CusPhone` varchar(30) DEFAULT NULL,
   `CusEmail` varchar(255) NOT NULL,
-  `CusAccountId` int(11) DEFAULT NULL
+  `CusAccountId` int(11) DEFAULT NULL,
+  `CusGender` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -92,6 +93,17 @@ CREATE TABLE `orderline` (
   `OrderId` int(11) NOT NULL,
   `ProductSn` int(11) NOT NULL,
   `ProductPrice` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `position`
+--
+
+CREATE TABLE `position` (
+  `PositionId` int(11) NOT NULL,
+  `PositionName` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -146,7 +158,8 @@ CREATE TABLE `staff` (
   `StaffId` int(11) NOT NULL,
   `StaffName` varchar(80) NOT NULL,
   `StaffPhone` varchar(30) DEFAULT NULL,
-  `StaffAccountId` int(11) NOT NULL
+  `StaffAccountId` int(11) NOT NULL,
+  `StaffPositionId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -184,19 +197,6 @@ CREATE TABLE `storestockwarning` (
   `StoreId` int(11) NOT NULL,
   `ProductId` int(11) NOT NULL,
   `WarningLevel` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `technician`
---
-
-CREATE TABLE `technician` (
-  `TechnicianId` int(11) NOT NULL,
-  `TechnicianName` varchar(255) NOT NULL,
-  `TechnicianContact` varchar(30) NOT NULL,
-  `AccountId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -244,6 +244,14 @@ ALTER TABLE `orderline`
   ADD KEY `orderline_storeproduct_ProductSn_fk` (`ProductSn`);
 
 --
+-- Indexes for table `position`
+--
+ALTER TABLE `position`
+  ADD PRIMARY KEY (`PositionId`),
+  ADD UNIQUE KEY `position_PositionId_uindex` (`PositionId`),
+  ADD UNIQUE KEY `position_PositionName_uindex` (`PositionName`);
+
+--
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
@@ -275,7 +283,8 @@ ALTER TABLE `provider`
 ALTER TABLE `staff`
   ADD PRIMARY KEY (`StaffId`),
   ADD UNIQUE KEY `staff_StaffId_uindex` (`StaffId`),
-  ADD KEY `staff_account_AccountId_fk` (`StaffAccountId`);
+  ADD KEY `staff_account_AccountId_fk` (`StaffAccountId`),
+  ADD KEY `staff_position_PositionId_fk` (`StaffPositionId`);
 
 --
 -- Indexes for table `store`
@@ -290,7 +299,8 @@ ALTER TABLE `store`
 ALTER TABLE `storeproduct`
   ADD PRIMARY KEY (`ProductSn`),
   ADD UNIQUE KEY `StoreProduct_ProductSn_uindex` (`ProductSn`),
-  ADD KEY `StoreProduct_store_StoreId_fk` (`StoreId`);
+  ADD KEY `StoreProduct_store_StoreId_fk` (`StoreId`),
+  ADD KEY `StoreProduct_product_ProductId_fk` (`ProductId`);
 
 --
 -- Indexes for table `storestockwarning`
@@ -300,13 +310,6 @@ ALTER TABLE `storestockwarning`
   ADD KEY `StoreStockWarning_product_ProductId_fk` (`ProductId`);
 
 --
--- Indexes for table `technician`
---
-ALTER TABLE `technician`
-  ADD PRIMARY KEY (`TechnicianId`),
-  ADD UNIQUE KEY `Technician_TechnicianId_uindex` (`TechnicianId`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -314,12 +317,12 @@ ALTER TABLE `technician`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `AccountId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `AccountId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `CategoryId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `CategoryId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `cusorder`
 --
@@ -329,12 +332,17 @@ ALTER TABLE `cusorder`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `CusId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `CusId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT for table `position`
+--
+ALTER TABLE `position`
+  MODIFY `PositionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ProductId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `productrepairwork`
 --
@@ -344,27 +352,22 @@ ALTER TABLE `productrepairwork`
 -- AUTO_INCREMENT for table `provider`
 --
 ALTER TABLE `provider`
-  MODIFY `ProviderId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ProviderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `StaffId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `StaffId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `StoreId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `StoreId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `storeproduct`
 --
 ALTER TABLE `storeproduct`
-  MODIFY `ProductSn` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `technician`
---
-ALTER TABLE `technician`
-  MODIFY `TechnicianId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ProductSn` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- Constraints for dumped tables
 --
@@ -407,20 +410,20 @@ ALTER TABLE `product`
 --
 ALTER TABLE `productrepairwork`
   ADD CONSTRAINT `productrepairwork_staff_StaffId_fk` FOREIGN KEY (`CreatedStaff`) REFERENCES `staff` (`StaffId`),
-  ADD CONSTRAINT `productrepairwork_storeproduct_ProductSn_fk` FOREIGN KEY (`ProductSn`) REFERENCES `storeproduct` (`ProductSn`),
-  ADD CONSTRAINT `productrepairwork_technician_TechnicianId_fk` FOREIGN KEY (`AssignedTechnician`) REFERENCES `technician` (`TechnicianId`);
+  ADD CONSTRAINT `productrepairwork_storeproduct_ProductSn_fk` FOREIGN KEY (`ProductSn`) REFERENCES `storeproduct` (`ProductSn`);
 
 --
 -- Constraints for table `staff`
 --
 ALTER TABLE `staff`
-  ADD CONSTRAINT `staff_account_AccountId_fk` FOREIGN KEY (`StaffAccountId`) REFERENCES `account` (`AccountId`);
+  ADD CONSTRAINT `staff_account_AccountId_fk` FOREIGN KEY (`StaffAccountId`) REFERENCES `account` (`AccountId`),
+  ADD CONSTRAINT `staff_position_PositionId_fk` FOREIGN KEY (`StaffPositionId`) REFERENCES `position` (`PositionId`);
 
 --
 -- Constraints for table `storeproduct`
 --
 ALTER TABLE `storeproduct`
-  ADD CONSTRAINT `StoreProduct_product_ProductId_fk` FOREIGN KEY (`ProductSn`) REFERENCES `product` (`ProductId`),
+  ADD CONSTRAINT `StoreProduct_product_ProductId_fk` FOREIGN KEY (`ProductId`) REFERENCES `product` (`ProductId`),
   ADD CONSTRAINT `StoreProduct_store_StoreId_fk` FOREIGN KEY (`StoreId`) REFERENCES `store` (`StoreId`);
 
 --

@@ -8,28 +8,30 @@ import javax.persistence.*;
 @Entity
 @IdClass(StorestockwarningPK.class)
 public class Storestockwarning {
-    private int storeId;
-    private int productId;
+    private Store store;
+    private Product product;
     private int warningLevel;
 
     @Id
-    @Column(name = "StoreId", nullable = false)
-    public int getStoreId() {
-        return storeId;
+    @ManyToOne
+    @JoinColumn(name = "StoreId", nullable = false)
+    public Store getStore() {
+        return store;
     }
 
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
+    public void setStore(Store storeId) {
+        this.store = storeId;
     }
 
     @Id
-    @Column(name = "ProductId", nullable = false)
-    public int getProductId() {
-        return productId;
+    @ManyToOne
+    @JoinColumn(name = "ProductId", nullable = false)
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProduct(Product productId) {
+        this.product = productId;
     }
 
     @Basic
@@ -49,8 +51,8 @@ public class Storestockwarning {
 
         Storestockwarning that = (Storestockwarning) o;
 
-        if (storeId != that.storeId) return false;
-        if (productId != that.productId) return false;
+        if (store != that.store) return false;
+        if (product != that.product) return false;
         if (warningLevel != that.warningLevel) return false;
 
         return true;
@@ -58,8 +60,8 @@ public class Storestockwarning {
 
     @Override
     public int hashCode() {
-        int result = storeId;
-        result = 31 * result + productId;
+        int result = store.hashCode();
+        result = 31 * result + product.hashCode();
         result = 31 * result + warningLevel;
         return result;
     }

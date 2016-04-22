@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -13,9 +10,21 @@ public class Staff {
     private int staffId;
     private String staffName;
     private String staffPhone;
-    private int staffAccountId;
+    private Account staffAccount;
+    private Position position;
+
+    @ManyToOne
+    @JoinColumn(name = "StaffPositionId")
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "StaffId", nullable = false)
     public int getStaffId() {
         return staffId;
@@ -45,14 +54,14 @@ public class Staff {
         this.staffPhone = staffPhone;
     }
 
-    @Basic
-    @Column(name = "StaffAccountId", nullable = false)
-    public int getStaffAccountId() {
-        return staffAccountId;
+    @OneToOne
+    @JoinColumn(name = "StaffAccountId", nullable = false)
+    public Account getStaffAccount() {
+        return staffAccount;
     }
 
-    public void setStaffAccountId(int staffAccountId) {
-        this.staffAccountId = staffAccountId;
+    public void setStaffAccount(Account staffAccountId) {
+        this.staffAccount = staffAccountId;
     }
 
     @Override
@@ -63,7 +72,7 @@ public class Staff {
         Staff staff = (Staff) o;
 
         if (staffId != staff.staffId) return false;
-        if (staffAccountId != staff.staffAccountId) return false;
+        if (staffAccount != staff.staffAccount) return false;
         if (staffName != null ? !staffName.equals(staff.staffName) : staff.staffName != null) return false;
         if (staffPhone != null ? !staffPhone.equals(staff.staffPhone) : staff.staffPhone != null) return false;
 
@@ -75,7 +84,8 @@ public class Staff {
         int result = staffId;
         result = 31 * result + (staffName != null ? staffName.hashCode() : 0);
         result = 31 * result + (staffPhone != null ? staffPhone.hashCode() : 0);
-        result = 31 * result + staffAccountId;
+        result = 31 * result + (position != null ? position.hashCode() : 0);
+        result = 31 * result + staffAccount.hashCode();
         return result;
     }
 }

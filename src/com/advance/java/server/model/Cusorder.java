@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
 
@@ -13,8 +10,8 @@ import java.sql.Timestamp;
 @Entity
 public class Cusorder {
     private int orderId;
-    private int staffId;
-    private int cusId;
+    private Staff staff;
+    private Customer customer;
     private Double orderDiscount;
     private Byte isOrderDelivery;
     private String deliveryAddress;
@@ -23,6 +20,7 @@ public class Cusorder {
     private Double orderPrePaid;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "OrderId", nullable = false)
     public int getOrderId() {
         return orderId;
@@ -32,24 +30,24 @@ public class Cusorder {
         this.orderId = orderId;
     }
 
-    @Basic
-    @Column(name = "StaffId", nullable = false)
-    public int getStaffId() {
-        return staffId;
+    @ManyToOne
+    @JoinColumn(name = "StaffId", nullable = false)
+    public Staff getStaff() {
+        return staff;
     }
 
-    public void setStaffId(int staffId) {
-        this.staffId = staffId;
+    public void setStaff(Staff staffId) {
+        this.staff = staffId;
     }
 
-    @Basic
-    @Column(name = "CusId", nullable = false)
-    public int getCusId() {
-        return cusId;
+    @ManyToOne
+    @JoinColumn(name = "CusId", nullable = false)
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCusId(int cusId) {
-        this.cusId = cusId;
+    public void setCustomer(Customer cusId) {
+        this.customer = cusId;
     }
 
     @Basic
@@ -120,8 +118,8 @@ public class Cusorder {
         Cusorder cusorder = (Cusorder) o;
 
         if (orderId != cusorder.orderId) return false;
-        if (staffId != cusorder.staffId) return false;
-        if (cusId != cusorder.cusId) return false;
+        if (staff != cusorder.staff) return false;
+        if (customer != cusorder.customer) return false;
         if (orderDiscount != null ? !orderDiscount.equals(cusorder.orderDiscount) : cusorder.orderDiscount != null)
             return false;
         if (isOrderDelivery != null ? !isOrderDelivery.equals(cusorder.isOrderDelivery) : cusorder.isOrderDelivery != null)
@@ -140,8 +138,8 @@ public class Cusorder {
     @Override
     public int hashCode() {
         int result = orderId;
-        result = 31 * result + staffId;
-        result = 31 * result + cusId;
+        result = 31 * result + staff.hashCode();
+        result = 31 * result + customer.hashCode();
         result = 31 * result + (orderDiscount != null ? orderDiscount.hashCode() : 0);
         result = 31 * result + (isOrderDelivery != null ? isOrderDelivery.hashCode() : 0);
         result = 31 * result + (deliveryAddress != null ? deliveryAddress.hashCode() : 0);

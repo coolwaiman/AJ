@@ -1,6 +1,6 @@
 package com.advance.java.server;
 
-import com.advance.java.server.model.Category;
+import com.advance.java.server.model.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -16,7 +16,19 @@ public class HibernateUtil {
     private static SessionFactory buildSessionFactory() {
         try {
             Configuration conf = new Configuration()
+                    .addAnnotatedClass(Position.class)
+                    .addAnnotatedClass(Productrepairwork.class)
+                    .addAnnotatedClass(Storestockwarning.class)
                     .addAnnotatedClass(Category.class)
+                    .addAnnotatedClass(Provider.class)
+                    .addAnnotatedClass(Product.class)
+                    .addAnnotatedClass(Store.class)
+                    .addAnnotatedClass(Storeproduct.class)
+                    .addAnnotatedClass(Staff.class)
+                    .addAnnotatedClass(Account.class)
+                    .addAnnotatedClass(Cusorder.class)
+                    .addAnnotatedClass(Orderline.class)
+                    .addAnnotatedClass(Customer.class)
                     .configure();
             ServiceRegistry sr = new StandardServiceRegistryBuilder().applySettings(conf.getProperties()).build();
             return conf.buildSessionFactory(sr);

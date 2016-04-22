@@ -13,21 +13,21 @@ public class StorestockwarningPK implements Serializable {
 
     @Column(name = "StoreId", nullable = false)
     @Id
-    public int getStoreId() {
+    public int getStore() {
         return storeId;
     }
 
-    public void setStoreId(int storeId) {
+    public void setStore(int storeId) {
         this.storeId = storeId;
     }
 
     @Column(name = "ProductId", nullable = false)
     @Id
-    public int getProductId() {
+    public int getProduct() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProduct(int productId) {
         this.productId = productId;
     }
 

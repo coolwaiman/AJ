@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -16,6 +13,7 @@ public class Store {
     private String storeContact;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "StoreId", nullable = false)
     public int getStoreId() {
         return storeId;

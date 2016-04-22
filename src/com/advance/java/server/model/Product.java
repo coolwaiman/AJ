@@ -12,9 +12,10 @@ public class Product {
     private String productDescription;
     private double productPrice;
     private Category category;
-    private int providerId;
+    private Provider provider;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ProductId", nullable = false)
     public int getProductId() {
         return productId;
@@ -64,14 +65,14 @@ public class Product {
         this.category = category;
     }
 
-    @Basic
-    @Column(name = "ProviderId", nullable = false)
-    public int getProviderId() {
-        return providerId;
+    @ManyToOne
+    @JoinColumn(name = "ProviderId", nullable = false)
+    public Provider getProvider() {
+        return provider;
     }
 
-    public void setProviderId(int providerId) {
-        this.providerId = providerId;
+    public void setProvider(Provider provider) {
+        this.provider = provider;
     }
 
     @Override
@@ -84,7 +85,7 @@ public class Product {
         if (productId != product.productId) return false;
         if (Double.compare(product.productPrice, productPrice) != 0) return false;
         if (category != product.category) return false;
-        if (providerId != product.providerId) return false;
+        if (provider != product.provider) return false;
         if (productName != null ? !productName.equals(product.productName) : product.productName != null) return false;
         if (productDescription != null ? !productDescription.equals(product.productDescription) : product.productDescription != null)
             return false;
@@ -102,7 +103,7 @@ public class Product {
         temp = Double.doubleToLongBits(productPrice);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + category.hashCode();
-        result = 31 * result + providerId;
+        result = 31 * result + provider.hashCode();
         return result;
     }
 }

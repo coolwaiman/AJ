@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -15,9 +12,21 @@ public class Customer {
     private String cusAddress;
     private String cusPhone;
     private String cusEmail;
-    private Integer cusAccountId;
+    private Account cusAccount;
+    private Character gender;
+
+    @Basic
+    @Column(name = "CusGender")
+    public Character getGender() {
+        return gender;
+    }
+
+    public void setGender(Character gender) {
+        this.gender = gender;
+    }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CusId", nullable = false)
     public int getCusId() {
         return cusId;
@@ -67,14 +76,14 @@ public class Customer {
         this.cusEmail = cusEmail;
     }
 
-    @Basic
-    @Column(name = "CusAccountId", nullable = true)
-    public Integer getCusAccountId() {
-        return cusAccountId;
+    @OneToOne
+    @JoinColumn(name = "CusAccountId", nullable = true)
+    public Account getCusAccount() {
+        return cusAccount;
     }
 
-    public void setCusAccountId(Integer cusAccountId) {
-        this.cusAccountId = cusAccountId;
+    public void setCusAccount(Account cusAccountId) {
+        this.cusAccount = cusAccountId;
     }
 
     @Override
@@ -89,7 +98,7 @@ public class Customer {
         if (cusAddress != null ? !cusAddress.equals(customer.cusAddress) : customer.cusAddress != null) return false;
         if (cusPhone != null ? !cusPhone.equals(customer.cusPhone) : customer.cusPhone != null) return false;
         if (cusEmail != null ? !cusEmail.equals(customer.cusEmail) : customer.cusEmail != null) return false;
-        if (cusAccountId != null ? !cusAccountId.equals(customer.cusAccountId) : customer.cusAccountId != null)
+        if (cusAccount != null ? !cusAccount.equals(customer.cusAccount) : customer.cusAccount != null)
             return false;
 
         return true;
@@ -102,7 +111,8 @@ public class Customer {
         result = 31 * result + (cusAddress != null ? cusAddress.hashCode() : 0);
         result = 31 * result + (cusPhone != null ? cusPhone.hashCode() : 0);
         result = 31 * result + (cusEmail != null ? cusEmail.hashCode() : 0);
-        result = 31 * result + (cusAccountId != null ? cusAccountId.hashCode() : 0);
+        result = 31 * result + (cusAccount != null ? cusAccount.hashCode() : 0);
+        result = 31 * result + (gender != null ? gender.hashCode() : 0);
         return result;
     }
 }

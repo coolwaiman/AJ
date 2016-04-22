@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -11,10 +8,11 @@ import javax.persistence.Id;
 @Entity
 public class Storeproduct {
     private int productSn;
-    private int storeId;
-    private Integer productId;
+    private Store store;
+    private Product product;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ProductSn", nullable = false)
     public int getProductSn() {
         return productSn;
@@ -24,24 +22,24 @@ public class Storeproduct {
         this.productSn = productSn;
     }
 
-    @Basic
-    @Column(name = "StoreId", nullable = false)
-    public int getStoreId() {
-        return storeId;
+    @ManyToOne
+    @JoinColumn(name = "StoreId", nullable = false)
+    public Store getStore() {
+        return store;
     }
 
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
+    public void setStore(Store storeId) {
+        this.store = storeId;
     }
 
-    @Basic
-    @Column(name = "ProductId", nullable = true)
-    public Integer getProductId() {
-        return productId;
+    @ManyToOne
+    @JoinColumn(name = "ProductId", nullable = true)
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProductId(Integer productId) {
-        this.productId = productId;
+    public void setProduct(Product productId) {
+        this.product = productId;
     }
 
     @Override
@@ -52,8 +50,8 @@ public class Storeproduct {
         Storeproduct that = (Storeproduct) o;
 
         if (productSn != that.productSn) return false;
-        if (storeId != that.storeId) return false;
-        if (productId != null ? !productId.equals(that.productId) : that.productId != null) return false;
+        if (store != that.store) return false;
+        if (product != null ? !product.equals(that.product) : that.product != null) return false;
 
         return true;
     }
@@ -61,8 +59,8 @@ public class Storeproduct {
     @Override
     public int hashCode() {
         int result = productSn;
-        result = 31 * result + storeId;
-        result = 31 * result + (productId != null ? productId.hashCode() : 0);
+        result = 31 * result + store.hashCode();
+        result = 31 * result + (product != null ? product.hashCode() : 0);
         return result;
     }
 }

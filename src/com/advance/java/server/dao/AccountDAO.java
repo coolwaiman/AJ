@@ -3,6 +3,8 @@ package com.advance.java.server.dao;
 import com.advance.java.server.HibernateUtil;
 import com.advance.java.server.model.Account;
 
+import java.util.List;
+
 /**
  * Created by rAYMOND on 4/22/2016.
  */
@@ -15,4 +17,9 @@ public class AccountDAO extends DAO{
 
         return account;
     }
+
+    public static List<Account> getAll() {
+        return getSession().createQuery("from Account ").list();
+    }
+
 }

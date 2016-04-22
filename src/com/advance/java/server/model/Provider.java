@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -11,8 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class Provider {
     private int providerId;
-    private String prodviderName;
+    private String providerName;
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "ProviderId", nullable = false)
     public int getProviderId() {
@@ -25,12 +23,12 @@ public class Provider {
 
     @Basic
     @Column(name = "ProdviderName", nullable = false, length = 255)
-    public String getProdviderName() {
-        return prodviderName;
+    public String getProviderName() {
+        return providerName;
     }
 
-    public void setProdviderName(String prodviderName) {
-        this.prodviderName = prodviderName;
+    public void setProviderName(String prodviderName) {
+        this.providerName = prodviderName;
     }
 
     @Override
@@ -41,7 +39,7 @@ public class Provider {
         Provider provider = (Provider) o;
 
         if (providerId != provider.providerId) return false;
-        if (prodviderName != null ? !prodviderName.equals(provider.prodviderName) : provider.prodviderName != null)
+        if (providerName != null ? !providerName.equals(provider.providerName) : provider.providerName != null)
             return false;
 
         return true;
@@ -50,7 +48,7 @@ public class Provider {
     @Override
     public int hashCode() {
         int result = providerId;
-        result = 31 * result + (prodviderName != null ? prodviderName.hashCode() : 0);
+        result = 31 * result + (providerName != null ? providerName.hashCode() : 0);
         return result;
     }
 }

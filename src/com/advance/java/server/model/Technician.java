@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -13,9 +10,10 @@ public class Technician {
     private int technicianId;
     private String technicianName;
     private String technicianContact;
-    private int accountId;
+    private Account account;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "TechnicianId", nullable = false)
     public int getTechnicianId() {
         return technicianId;
@@ -45,14 +43,14 @@ public class Technician {
         this.technicianContact = technicianContact;
     }
 
-    @Basic
-    @Column(name = "AccountId", nullable = false)
-    public int getAccountId() {
-        return accountId;
+    @OneToOne
+    @JoinColumn(name = "AccountId", nullable = false)
+    public Account getAccount() {
+        return account;
     }
 
-    public void setAccountId(int accountId) {
-        this.accountId = accountId;
+    public void setAccount(Account accountId) {
+        this.account = accountId;
     }
 
     @Override
@@ -63,7 +61,7 @@ public class Technician {
         Technician that = (Technician) o;
 
         if (technicianId != that.technicianId) return false;
-        if (accountId != that.accountId) return false;
+        if (account != that.account) return false;
         if (technicianName != null ? !technicianName.equals(that.technicianName) : that.technicianName != null)
             return false;
         if (technicianContact != null ? !technicianContact.equals(that.technicianContact) : that.technicianContact != null)
@@ -77,7 +75,7 @@ public class Technician {
         int result = technicianId;
         result = 31 * result + (technicianName != null ? technicianName.hashCode() : 0);
         result = 31 * result + (technicianContact != null ? technicianContact.hashCode() : 0);
-        result = 31 * result + accountId;
+        result = 31 * result + account.hashCode();
         return result;
     }
 }

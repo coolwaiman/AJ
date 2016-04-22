@@ -1,9 +1,6 @@
 package com.advance.java.server.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
@@ -12,14 +9,15 @@ import java.sql.Timestamp;
 @Entity
 public class Productrepairwork {
     private int repairWorkId;
-    private int orderId;
-    private int productSn;
-    private int createdStaff;
-    private Integer assignedTechnician;
+    private Cusorder order;
+    private Storeproduct storeProduct;
+    private Staff createdStaff;
+    private Staff assignedTechnician;
     private Timestamp createdDate;
     private Timestamp solvedDate;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "RepairWorkId", nullable = false)
     public int getRepairWorkId() {
         return repairWorkId;
@@ -29,43 +27,43 @@ public class Productrepairwork {
         this.repairWorkId = repairWorkId;
     }
 
-    @Basic
-    @Column(name = "OrderId", nullable = false)
-    public int getOrderId() {
-        return orderId;
+    @ManyToOne
+    @JoinColumn(name = "OrderId", nullable = false)
+    public Cusorder getOrder() {
+        return order;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setOrder(Cusorder orderId) {
+        this.order = orderId;
     }
 
-    @Basic
-    @Column(name = "ProductSn", nullable = false)
-    public int getProductSn() {
-        return productSn;
+    @ManyToOne
+    @JoinColumn(name = "ProductSn", nullable = false)
+    public Storeproduct getStoreProduct() {
+        return storeProduct;
     }
 
-    public void setProductSn(int productSn) {
-        this.productSn = productSn;
+    public void setStoreProduct(Storeproduct productSn) {
+        this.storeProduct = productSn;
     }
 
-    @Basic
-    @Column(name = "CreatedStaff", nullable = false)
-    public int getCreatedStaff() {
+    @ManyToOne
+    @JoinColumn(name = "CreatedStaff", nullable = false)
+    public Staff getCreatedStaff() {
         return createdStaff;
     }
 
-    public void setCreatedStaff(int createdStaff) {
+    public void setCreatedStaff(Staff createdStaff) {
         this.createdStaff = createdStaff;
     }
 
-    @Basic
-    @Column(name = "AssignedTechnician", nullable = true)
-    public Integer getAssignedTechnician() {
+    @ManyToOne
+    @JoinColumn(name = "AssignedTechnician", nullable = true)
+    public Staff getAssignedTechnician() {
         return assignedTechnician;
     }
 
-    public void setAssignedTechnician(Integer assignedTechnician) {
+    public void setAssignedTechnician(Staff assignedTechnician) {
         this.assignedTechnician = assignedTechnician;
     }
 
@@ -97,8 +95,8 @@ public class Productrepairwork {
         Productrepairwork that = (Productrepairwork) o;
 
         if (repairWorkId != that.repairWorkId) return false;
-        if (orderId != that.orderId) return false;
-        if (productSn != that.productSn) return false;
+        if (order != that.order) return false;
+        if (storeProduct != that.storeProduct) return false;
         if (createdStaff != that.createdStaff) return false;
         if (assignedTechnician != null ? !assignedTechnician.equals(that.assignedTechnician) : that.assignedTechnician != null)
             return false;
@@ -111,9 +109,9 @@ public class Productrepairwork {
     @Override
     public int hashCode() {
         int result = repairWorkId;
-        result = 31 * result + orderId;
-        result = 31 * result + productSn;
-        result = 31 * result + createdStaff;
+        result = 31 * result + order.hashCode();
+        result = 31 * result + storeProduct.hashCode();
+        result = 31 * result + createdStaff.hashCode();
         result = 31 * result + (assignedTechnician != null ? assignedTechnician.hashCode() : 0);
         result = 31 * result + (createdDate != null ? createdDate.hashCode() : 0);
         result = 31 * result + (solvedDate != null ? solvedDate.hashCode() : 0);

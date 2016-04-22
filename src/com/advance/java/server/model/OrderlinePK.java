@@ -13,21 +13,21 @@ public class OrderlinePK implements Serializable {
 
     @Column(name = "OrderId", nullable = false)
     @Id
-    public int getOrderId() {
+    public int getCusOrder() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
+    public void setCusOrder(int orderId) {
         this.orderId = orderId;
     }
 
     @Column(name = "ProductSn", nullable = false)
     @Id
-    public int getProductSn() {
+    public int getStoreProduct() {
         return productSn;
     }
 
-    public void setProductSn(int productSn) {
+    public void setStoreProduct(int productSn) {
         this.productSn = productSn;
     }
 

@@ -1,35 +1,37 @@
 package com.advance.java.server.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-@IdClass(OrderlinePK.class)
-public class Orderline {
-    private int orderId;
-    private int productSn;
+public class Orderline implements Serializable {
+    private Cusorder cusOrder;
+    private Storeproduct storeProduct;
     private double productPrice;
 
     @Id
-    @Column(name = "OrderId", nullable = false)
-    public int getOrderId() {
-        return orderId;
+    @ManyToOne
+    @JoinColumn(name = "OrderId", nullable = false)
+    public Cusorder getCusOrder() {
+        return cusOrder;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setCusOrder(Cusorder orderId) {
+        this.cusOrder = orderId;
     }
 
     @Id
-    @Column(name = "ProductSn", nullable = false)
-    public int getProductSn() {
-        return productSn;
+    @ManyToOne
+    @JoinColumn(name = "ProductSn", referencedColumnName = "ProductSn", nullable = false)
+    public Storeproduct getStoreProduct() {
+        return storeProduct;
     }
 
-    public void setProductSn(int productSn) {
-        this.productSn = productSn;
+    public void setStoreProduct(Storeproduct productSn) {
+        this.storeProduct = productSn;
     }
 
     @Basic
@@ -49,8 +51,8 @@ public class Orderline {
 
         Orderline orderline = (Orderline) o;
 
-        if (orderId != orderline.orderId) return false;
-        if (productSn != orderline.productSn) return false;
+        if (cusOrder != orderline.cusOrder) return false;
+        if (storeProduct != orderline.storeProduct) return false;
         if (Double.compare(orderline.productPrice, productPrice) != 0) return false;
 
         return true;
@@ -60,8 +62,8 @@ public class Orderline {
     public int hashCode() {
         int result;
         long temp;
-        result = orderId;
-        result = 31 * result + productSn;
+        result = cusOrder.hashCode();
+        result = 31 * result + storeProduct.hashCode();
         temp = Double.doubleToLongBits(productPrice);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
