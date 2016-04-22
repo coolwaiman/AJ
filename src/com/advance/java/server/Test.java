@@ -18,6 +18,8 @@ class Test {
         //insertPosition();
         //insertStaff();
        // insertCustomer();
+    }
+    private static void tryGetOrder() {
         Staff staff = StaffDAO.getByUsername("Raymond");
         System.out.println("Got Staff " + staff.getStaffName());
         Customer customer = CustomerDAO.getByUsername("Mary");
@@ -25,8 +27,8 @@ class Test {
         List<Storeproduct> storeProducts = StoreProductDAO.getByStoreAndProduct(1, 1);
         System.out.println("Got SP " + storeProducts.get(0).getProduct().getProductName());
         System.out.println(customer.getCusorders().get(0).getCustomer().getCusName());
-    }
 
+    }
     private static void testInsertOrder() {
         Staff staff = StaffDAO.getByUsername("Raymond");
         System.out.println("Got Staff " + staff.getStaffName());
