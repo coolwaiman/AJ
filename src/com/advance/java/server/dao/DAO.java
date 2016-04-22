@@ -28,4 +28,18 @@ public class DAO<T> {
             return false;
         }
     }
+
+    public static boolean update(Object object) {
+        if(s == null) getSession();
+        try {
+            s.beginTransaction();
+            s.update(object);
+            s.getTransaction().commit();
+            return true;
+        } catch (HibernateException e) {
+            e.printStackTrace();
+            s.getTransaction().rollback();
+            return false;
+        }
+    }
 }
