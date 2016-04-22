@@ -1,42 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96cf9e84-4c87-45dc-85a2-ea6e959cffcc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/CusOrderDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/CustomerDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/PositionDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/ProviderDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/StaffDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/StoreDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/StoreProductDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Position.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/advance/java/server/DAO.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+    <list default="true" id="96cf9e84-4c87-45dc-85a2-ea6e959cffcc" name="Default" comment="v">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/advdb.sql" afterPath="$PROJECT_DIR$/src/advdb.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/HibernateUtil.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/HibernateUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/Test.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/dao/AccountDAO.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/AccountDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/dao/CategoryDAO.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/CategoryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/dao/DAO.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/DAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/dao/ProductDAO.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/ProductDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Account.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Account.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Cusorder.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Cusorder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Customer.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Customer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Orderline.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Orderline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/OrderlinePK.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/OrderlinePK.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Position.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Position.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Product.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Productrepairwork.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Productrepairwork.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Provider.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Provider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Staff.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Staff.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Store.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Store.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Storeproduct.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Storeproduct.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Storestockwarning.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Storestockwarning.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/StorestockwarningPK.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/StorestockwarningPK.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/Technician.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/Technician.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,20 +41,6 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - advdb@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="position" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -88,8 +48,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="advdb.productrepairwork" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.productrepairwork">
+      <file leaf-file-name="StoreProductDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/StoreProductDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Storeproduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Storeproduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+                <element signature="e#775#776#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Category.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#616#619#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Provider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Provider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
+                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="advdb.staff" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.staff">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -103,84 +150,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Store.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Store.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
+            <state relative-caret-position="180">
+              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Orderline.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Orderline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CusOrderDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/CusOrderDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="advdb.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/advdb.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="428" column="2" selection-start-line="428" selection-start-column="2" selection-end-line="428" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StoreProductDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/StoreProductDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/CustomerDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#235#236#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StaffDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/StaffDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -217,32 +208,32 @@
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/DAO.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/CategoryDAO.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/StoreDAO.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Store.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/ProviderDAO.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/ProductDAO.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Product.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Provider.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Storeproduct.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/AccountDAO.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Account.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Customer.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Technician.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Position.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Staff.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/PositionDAO.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Cusorder.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Productrepairwork.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Storestockwarning.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/StaffDAO.java" />
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/StoreProductDAO.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/CusOrderDAO.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/Test.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/OrderlinePK.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Orderline.java" />
         <option value="$PROJECT_DIR$/src/advdb.sql" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Storestockwarning.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Position.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/Test.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Cusorder.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Provider.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Store.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Product.java" />
       </list>
     </option>
   </component>
@@ -257,6 +248,9 @@
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
@@ -447,7 +441,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="hi&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/hibernate.cfg.xml&#10;test&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/Test.java&#10;Hi&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/hibernate.cfg.xml&#10;Warn&#9;PSI&#9;JAVA://com.advance.java.server.model.Storestockwarning&#10;Repai&#9;PSI&#9;JAVA://com.advance.java.server.model.Productrepairwork&#10;CusOr&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Cusorder.java&#10;OrderLin&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Orderline.java&#10;CusOrde&#9;PSI&#9;JAVA://com.advance.java.server.model.Cusorder&#10;CusOrd&#9;FILE&#9;dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.cusorder&#10;order&#9;PSI&#9;JAVA://com.advance.java.server.model.Orderline&#10;Pos&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/dao/PositionDAO.java&#10;Staf&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Staff.java&#10;hib&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/hibernate.cfg.xml&#10;Staff&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Staff.java&#10;pos&#9;PSI&#9;JAVA://com.advance.java.server.model.Position&#10;H&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/HibernateUtil.java&#10;Cust&#9;PSI&#9;JAVA://com.advance.java.server.model.Customer&#10;Ut&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/HibernateUtil.java&#10;Sto&#9;PSI&#9;JAVA://com.advance.java.server.model.Store" />
+    <property name="SearchEverywhereHistoryKey" value="Store&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Store.java&#10;Provid&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Provider.java&#10;Cat&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Category.java&#10;Test&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/Test.java&#10;Custome&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Customer.java&#10;position&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Position.java&#10;StoreSt&#9;PSI&#9;JAVA://com.advance.java.server.model.Storestockwarning&#10;Sto&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/dao/StoreProductDAO.java&#10;Stor&#9;FILE&#9;dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.storestockwarning&#10;hi&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/hibernate.cfg.xml&#10;test&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/Test.java&#10;Hi&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/hibernate.cfg.xml&#10;Warn&#9;PSI&#9;JAVA://com.advance.java.server.model.Storestockwarning&#10;Repai&#9;PSI&#9;JAVA://com.advance.java.server.model.Productrepairwork&#10;CusOr&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Cusorder.java&#10;OrderLin&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Orderline.java&#10;CusOrde&#9;PSI&#9;JAVA://com.advance.java.server.model.Cusorder&#10;CusOrd&#9;FILE&#9;dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.cusorder&#10;order&#9;PSI&#9;JAVA://com.advance.java.server.model.Orderline&#10;Pos&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/dao/PositionDAO.java&#10;Staf&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Staff.java&#10;hib&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/hibernate.cfg.xml&#10;Staff&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/model/Staff.java&#10;pos&#9;PSI&#9;JAVA://com.advance.java.server.model.Position&#10;H&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/HibernateUtil.java&#10;Cust&#9;PSI&#9;JAVA://com.advance.java.server.model.Customer&#10;Ut&#9;FILE&#9;file://C:/Users/rAYMOND/IdeaProjects/AJ/src/com/advance/java/server/HibernateUtil.java" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="JPA.DatabaseSchemaImportDialog" value="076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9" />
   </component>
@@ -1010,7 +1004,7 @@
       <option name="presentableId" value="Default" />
       <updated>1461297207196</updated>
       <workItem from="1461297208564" duration="190000" />
-      <workItem from="1461304856706" duration="17138000" />
+      <workItem from="1461304856706" duration="17752000" />
     </task>
     <task id="LOCAL-00001" summary="v">
       <created>1461312555803</created>
@@ -1026,11 +1020,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461312970561</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v">
+      <created>1461322314760</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461322314760</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17328000" />
+    <option name="totallyTimeSpent" value="17942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
@@ -1038,23 +1039,23 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329849" sideWeight="0.49784017" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329849" sideWeight="0.49568033" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32520324" sideWeight="0.50863934" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32520324" sideWeight="0.51295894" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32520324" sideWeight="0.4913607" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32520324" sideWeight="0.48704103" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20680346" sideWeight="0.5060241" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20680346" sideWeight="0.4939759" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20680346" sideWeight="0.4939759" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5060241" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329849" sideWeight="0.49784017" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.4939759" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39953542" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1085,7 +1086,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/advance/java/server/Test.java</url>
-          <line>60</line>
+          <line>69</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -1099,22 +1100,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/ResourceBunble_it_IT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/socket/ConnectionServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1173,17 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#616#619#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1210,14 +1184,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1266,25 +1232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-          <folding>
-            <element signature="e#1822#1823#0" expanded="false" />
-            <element signature="e#1862#1863#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Provider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/StoreDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -1292,14 +1239,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Storeproduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1343,19 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-920">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding>
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Technician.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1365,27 +1291,6 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.customer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.staff">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1444,14 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Storestockwarning.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Staff.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -1504,23 +1401,10 @@
         <state relative-caret-position="391">
           <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#235#236#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.store">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1533,32 +1417,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/StoreProductDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Cusorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
           <folding />
         </state>
       </provider>
@@ -1576,7 +1434,7 @@
         <state relative-caret-position="437">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1595,6 +1453,192 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="428" column="2" selection-start-line="428" selection-start-column="2" selection-end-line="428" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.storestockwarning">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/StoreProductDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Storestockwarning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.position">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Cusorder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#616#619#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Provider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.store">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Storeproduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8fc6aa1/076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9/advdb.staff">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

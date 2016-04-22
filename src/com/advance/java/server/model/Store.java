@@ -1,6 +1,7 @@
 package com.advance.java.server.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -11,6 +12,16 @@ public class Store {
     private String storeName;
     private String storeLocation;
     private String storeContact;
+    private List<Storeproduct> storeproducts;
+
+    @OneToMany(mappedBy = "store")
+    public List<Storeproduct> getStoreproducts() {
+        return storeproducts;
+    }
+
+    public void setStoreproducts(List<Storeproduct> storeproducts) {
+        this.storeproducts = storeproducts;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

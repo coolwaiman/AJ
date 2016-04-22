@@ -24,6 +24,16 @@ class Test {
         System.out.println("Got Customer " + customer.getCusName());
         List<Storeproduct> storeProducts = StoreProductDAO.getByStoreAndProduct(1, 1);
         System.out.println("Got SP " + storeProducts.get(0).getProduct().getProductName());
+        System.out.println(customer.getCusorders().get(0).getCustomer().getCusName());
+    }
+
+    private static void testInsertOrder() {
+        Staff staff = StaffDAO.getByUsername("Raymond");
+        System.out.println("Got Staff " + staff.getStaffName());
+        Customer customer = CustomerDAO.getByUsername("Mary");
+        System.out.println("Got Customer " + customer.getCusName());
+        List<Storeproduct> storeProducts = StoreProductDAO.getByStoreAndProduct(1, 1);
+        System.out.println("Got SP " + storeProducts.get(0).getProduct().getProductName());
         Cusorder cusorder = new Cusorder();
         cusorder.setCustomer(customer);
         cusorder.setStaff(staff);
@@ -34,7 +44,6 @@ class Test {
         orderline.setStoreProduct(storeProducts.get(0));
         CusOrderDAO.makeOrder(cusorder, Arrays.asList(orderline));
     }
-
     private static void insertPosition() {
         String [] pos = {
                 "CEO", "Sales", "Technician", "HR Manager", "Store Manager" , "Stock Manager", "Game Researcher"

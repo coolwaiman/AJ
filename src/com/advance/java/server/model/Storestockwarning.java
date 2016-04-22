@@ -1,13 +1,13 @@
 package com.advance.java.server.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-@IdClass(StorestockwarningPK.class)
-public class Storestockwarning {
+public class Storestockwarning implements Serializable{
     private Store store;
     private Product product;
     private int warningLevel;

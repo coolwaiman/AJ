@@ -1,6 +1,7 @@
 package com.advance.java.server.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -14,6 +15,16 @@ public class Customer {
     private String cusEmail;
     private Account cusAccount;
     private Character gender;
+    private List<Cusorder> cusorders;
+
+    @OneToMany(mappedBy = "customer")
+    public List<Cusorder> getCusorders() {
+        return cusorders;
+    }
+
+    public void setCusorders(List<Cusorder> cusorders) {
+        this.cusorders = cusorders;
+    }
 
     @Basic
     @Column(name = "CusGender")

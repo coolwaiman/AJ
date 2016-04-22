@@ -3,6 +3,7 @@ package com.advance.java.server.model;
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -18,6 +19,16 @@ public class Cusorder {
     private Date deliveryDate;
     private Timestamp orderDate;
     private Double orderPrePaid;
+    private List<Orderline> orderlines;
+
+    @OneToMany(mappedBy = "cusOrder")
+    public List<Orderline> getOrderlines() {
+        return orderlines;
+    }
+
+    public void setOrderlines(List<Orderline> orderlines) {
+        this.orderlines = orderlines;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

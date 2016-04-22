@@ -1,6 +1,7 @@
 package com.advance.java.server.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -9,6 +10,17 @@ import javax.persistence.*;
 public class Position {
     private int positionId;
     private String positionName;
+    private List<Staff> staffs;
+
+
+    @OneToMany(mappedBy = "position")
+    public List<Staff> getStaffs() {
+        return staffs;
+    }
+
+    public void setStaffs(List<Staff> staffs) {
+        this.staffs = staffs;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
