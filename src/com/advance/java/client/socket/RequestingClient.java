@@ -45,8 +45,8 @@ public class RequestingClient implements Runnable, ConnectionSubject {
                             new InputStreamReader(System.in));
             PrintStream out
                     = new PrintStream(socket.getOutputStream());
-            DataInputStream in
-                    = new DataInputStream(socket.getInputStream());
+            //DataInputStream in  = new DataInputStream(socket.getInputStream());
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
             System.out.println("Loading...");
 
             try {
@@ -88,12 +88,13 @@ public class RequestingClient implements Runnable, ConnectionSubject {
         //System.out.println("Connection End");
     }
 
-    private String doRead(DataInputStream in) throws IOException {
+    private String doRead(BufferedReader in) throws IOException {
         StringBuilder sb = new StringBuilder();
-        while (in.available() > 0) {
-            sb.append((char) in.read());
+        while (in.ready()) {
+            sb.append((char)in.read());
         }
-        return sb.toString();
+        String str = new String(sb.toString().getBytes(), "UTF-8");
+        return str;
     }
 
     @Override

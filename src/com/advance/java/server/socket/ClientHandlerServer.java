@@ -44,7 +44,7 @@ public class ClientHandlerServer implements Runnable {
             DataInputStream input;
             PrintStream output;
             input = new DataInputStream(ms.getInputStream());
-            output = new PrintStream(ms.getOutputStream());
+            output = new PrintStream(ms.getOutputStream(),true, "UTF-8");
             
             Command c = new LoginCommand(input, output);
             c.execute();

@@ -20,6 +20,7 @@ import java.io.PrintStream;
  * @author User
  */
 public class LoginCommand implements Command {
+    public static final String TAG = "login";
 
     DataInputStream in = null;
     PrintStream out = null;
@@ -60,17 +61,17 @@ public class LoginCommand implements Command {
 
     @Override
     public String getTag() {
-        return "login";
+        return TAG;
     }
 
     @Override
     public String getDescription() {
-        return "";
+        return "Login";
     }
 
     @Override
     public String getShortDescription() {
-        return null;
+        return "login";
     }
 
 }

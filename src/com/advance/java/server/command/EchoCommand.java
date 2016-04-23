@@ -5,6 +5,8 @@
  */
 package com.advance.java.server.command;
 
+import com.advance.java.server.socket.PortSession;
+
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -14,32 +16,32 @@ import java.io.PrintStream;
  * @author User
  */
 public class EchoCommand implements Command {
+    public static final String TAG = "ec";
 
-    DataInputStream in = null;
-    PrintStream out = null;
+    PortSession session = null;
 
-    public EchoCommand(DataInputStream in, PrintStream out) {
-        this.in = in;
-        this.out = out;
+    public EchoCommand(PortSession session){
+        this.session = session;
     }
+
 
     @Override
     public void execute() throws IOException {
-        out.print("Start to Echo: ");
+        session.out.print("Start to Echo: ");
         String inputStr = "";
-        while ((inputStr = in.readLine()) != null) {
-            out.println("Echo: "+inputStr);
+        while ((inputStr = session.in.readLine()) != null) {
+            session.out.println("Echo: "+inputStr);
         }
     }
 
     @Override
     public String getName() {
-        return "Echo";
+        return session.getString("Echo");
     }
 
     @Override
     public String getTag() {
-        return "ec";
+        return TAG;
     }
 
     @Override
