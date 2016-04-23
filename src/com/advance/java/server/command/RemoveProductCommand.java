@@ -24,7 +24,7 @@ public class RemoveProductCommand implements Command{
 
     @Override
     public String getName() {
-        return null;
+        return session.getString("RemoveProduct");
     }
 
     @Override

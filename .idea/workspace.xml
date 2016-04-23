@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96cf9e84-4c87-45dc-85a2-ea6e959cffcc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/BackCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/InsertProductCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/ProductManageCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/RemoveProductCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/SelectProductCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/StopableCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/UpdateProductCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MsgBundle.properties" afterPath="$PROJECT_DIR$/src/MsgBundle.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MsgBundle_zh_TW.properties" afterPath="$PROJECT_DIR$/src/MsgBundle_zh_TW.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/command/MenuCommand.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/MenuCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/command/InsertProductCommand.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/InsertProductCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/command/LoginCommand.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/LoginCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/command/ProductManageCommand.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/ProductManageCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/command/RemoveProductCommand.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/RemoveProductCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/command/SelectProductCommand.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/SelectProductCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/command/UpdateProductCommand.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/command/UpdateProductCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/dao/ProviderDAO.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/dao/ProviderDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/model/role/RoleHandler.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/model/role/RoleHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/socket/ClientHandlerServer.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/socket/ClientHandlerServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/advance/java/server/socket/PortSession.java" afterPath="$PROJECT_DIR$/src/com/advance/java/server/socket/PortSession.java" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -74,8 +70,8 @@
                   <state />
                 </provider>
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="361">
-                    <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                  <state relative-caret-position="280">
+                    <caret line="21" column="13" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="13" />
                     <folding />
                   </state>
                 </provider>
@@ -92,75 +88,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MenuCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/MenuCommand.java">
+      <file leaf-file-name="HibernateUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/HibernateUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="65" column="13" selection-start-line="31" selection-start-column="27" selection-end-line="65" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2731#2739#0" expanded="true" />
-                <element signature="e#3672#3673#0" expanded="true" />
-                <element signature="e#3701#3702#0" expanded="true" />
-                <element signature="e#3745#3746#0" expanded="true" />
-                <element signature="e#3771#3772#0" expanded="true" />
-                <element signature="e#3823#3824#0" expanded="true" />
-                <element signature="e#3852#3853#0" expanded="true" />
-                <element signature="e#3909#3910#0" expanded="true" />
-                <element signature="e#3938#3939#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-146">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductManageCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/ProductManageCommand.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3901#3909#0" expanded="true" />
-                <element signature="e#4859#4860#0" expanded="true" />
-                <element signature="e#4916#4917#0" expanded="true" />
-                <element signature="e#4960#4961#0" expanded="true" />
-                <element signature="e#4986#4987#0" expanded="true" />
-                <element signature="e#5038#5039#0" expanded="true" />
-                <element signature="e#5099#5100#0" expanded="true" />
-                <element signature="e#5156#5157#0" expanded="true" />
-                <element signature="e#5218#5219#0" expanded="true" />
-                <element signature="e#5258#5259#0" expanded="true" />
-                <element signature="e#5292#5293#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-13">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientHandlerServer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/socket/ClientHandlerServer.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestingClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/RequestingClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionSubject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionSubject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="40" column="81" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoleHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/role/RoleHandler.java">
+      <file leaf-file-name="ConnectionObserver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionObserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+            <state relative-caret-position="133">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuitCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/QuitCommand.java">
+      <file leaf-file-name="ConnectionClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="243">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,111 +160,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BackCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/BackCommand.java">
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="361">
+              <caret line="40" column="65" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/ProductDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-                <element signature="e#706#707#0" expanded="true" />
-                <element signature="e#754#755#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#876#877#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1038#1039#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectProductCommand.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SelectProductCommand.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/SelectProductCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="310">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateProductCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/UpdateProductCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#500#501#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-                <element signature="e#760#761#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemoveProductCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/RemoveProductCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#500#501#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-                <element signature="e#760#761#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertProductCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/InsertProductCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -299,8 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Storeproduct.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/AccountDAO.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Technician.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/Staff.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/PositionDAO.java" />
@@ -332,24 +246,26 @@
         <option value="$PROJECT_DIR$/src/com/advance/java/server/model/role/Role.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/command/ChangeLangageCommand.java" />
         <option value="$PROJECT_DIR$/src/MsgBundle_zh_CN.properties" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/client/socket/RequestingClient.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/LoginCommand.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/command/ChangeLanguageCommand.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/command/EchoCommand.java" />
         <option value="$PROJECT_DIR$/src/MsgBundle_zh_TW.properties" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/command/StopableCommand.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/command/MenuCommand.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/socket/PortSession.java" />
-        <option value="$PROJECT_DIR$/src/MsgBundle.properties" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/command/BackCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/role/RoleHandler.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/command/QuitCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/InsertProductCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/RemoveProductCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/SelectProductCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/UpdateProductCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/ProductManageCommand.java" />
         <option value="$PROJECT_DIR$/src/com/advance/java/server/socket/ClientHandlerServer.java" />
+        <option value="$PROJECT_DIR$/src/MsgBundle.properties" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/UpdateProductCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/RemoveProductCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/ProviderDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/InsertProductCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/model/role/RoleHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/ProductManageCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/LoginCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/client/socket/RequestingClient.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/dao/ProductDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/advance/java/server/command/SelectProductCommand.java" />
       </list>
     </option>
   </component>
@@ -568,6 +484,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="role" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AJ" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AJ" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1112,7 +1054,14 @@
       <option name="project" value="LOCAL" />
       <updated>1461395959607</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="More More Command">
+      <created>1461407717261</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1461407717261</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1133,13 +1082,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284091" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284091" sideWeight="0.48203126" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284091" sideWeight="0.46601942" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272727" sideWeight="0.18608414" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33409092" sideWeight="0.21521036" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33409092" sideWeight="0.81391585" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.72411" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33409092" sideWeight="0.7847896" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1208,7 +1157,8 @@
     <MESSAGE value="added commands&#10;&#10;PortSession: to store single session shared information" />
     <MESSAGE value="Enchanted connection (with chinese)&#10;&#10;new Command" />
     <MESSAGE value="Help Command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Help Command" />
+    <MESSAGE value="More More Command" />
+    <option name="LAST_COMMIT_MESSAGE" value="More More Command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1235,54 +1185,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.store" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.staff" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.provider" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.product" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.productrepairwork" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.category" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.cusorder" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.customer" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.account" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.orderline" />
-    <entry file="file://$PROJECT_DIR$/src/advdb.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="438" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.technician" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c39db7a1-30df-46df-a195-eb8266dbbc29/console.sql" />
-    <entry file="dbDummy://dbtable:/ec1b7c7c/c39db7a1-30df-46df-a195-eb8266dbbc29/ajdb.storeproduct" />
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#616#619#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1290,14 +1192,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,26 +1211,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/role/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Locale.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="521" column="80" selection-start-line="521" selection-start-column="80" selection-end-line="521" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/socket/ConnectionServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1352,44 +1230,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionSubject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/RequestingClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/HRManageCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1399,20 +1245,6 @@
         <state relative-caret-position="209">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/ChangeLanguageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#1142#1143#0" expanded="true" />
-            <element signature="e#1205#1206#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1448,30 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/StopableCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/LoginCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/StaffDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/socket/PortSession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1484,6 +1292,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/QuitCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/ProductrepairworkDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/UndoableCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1492,138 +1318,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MsgBundle.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/ChangeLanguageCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/MenuCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="65" column="13" selection-start-line="31" selection-start-column="27" selection-end-line="65" selection-end-column="13" />
+        <state relative-caret-position="424">
+          <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2731#2739#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3701#3702#0" expanded="true" />
-            <element signature="e#3745#3746#0" expanded="true" />
-            <element signature="e#3771#3772#0" expanded="true" />
-            <element signature="e#3823#3824#0" expanded="true" />
-            <element signature="e#3852#3853#0" expanded="true" />
-            <element signature="e#3909#3910#0" expanded="true" />
-            <element signature="e#3938#3939#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/role/RoleHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/QuitCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/RemoveProductCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/SelectProductCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/UpdateProductCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/InsertProductCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1142#1143#0" expanded="false" />
+            <element signature="e#1205#1206#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/BackCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="266">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#364#365#0" expanded="true" />
@@ -1640,32 +1350,322 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/ProductManageCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/StopableCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+        <state relative-caret-position="95">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/UpdateProductCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3901#3909#0" expanded="true" />
-            <element signature="e#4859#4860#0" expanded="true" />
-            <element signature="e#4916#4917#0" expanded="true" />
-            <element signature="e#4960#4961#0" expanded="true" />
-            <element signature="e#4986#4987#0" expanded="true" />
-            <element signature="e#5038#5039#0" expanded="true" />
-            <element signature="e#5099#5100#0" expanded="true" />
-            <element signature="e#5156#5157#0" expanded="true" />
-            <element signature="e#5218#5219#0" expanded="true" />
-            <element signature="e#5258#5259#0" expanded="true" />
-            <element signature="e#5292#5293#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/RemoveProductCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MsgBundle.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/socket/ConnectionServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-222">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding>
+            <element signature="e#616#619#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/CusOrderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/AccountDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="183" column="40" selection-start-line="183" selection-start-column="40" selection-end-line="183" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/ProviderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/advdb.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="866">
+          <caret line="147" column="16" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/CategoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/InsertProductCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/MenuCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2731#2739#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/role/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/StaffDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/LoginCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/socket/ClientHandlerServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="40" column="81" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
+        <state relative-caret-position="337">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/role/RoleHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/ProductManageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="41" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3889#3897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/PositionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/StoreServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/RequestingClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/client/socket/ConnectionClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="40" column="65" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/dao/ProductDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/advance/java/server/command/SelectProductCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
