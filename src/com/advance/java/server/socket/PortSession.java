@@ -1,5 +1,7 @@
 package com.advance.java.server.socket;
 
+import com.advance.java.server.command.StopableCommand;
+import com.advance.java.server.command.UndoableCommand;
 import com.advance.java.server.model.Staff;
 
 import java.io.DataInputStream;
@@ -7,11 +9,12 @@ import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.Stack;
 
 /**
  * Created by User on 23/4/2016.
  */
-public class PortSession {
+public class PortSession implements StopableCommand{
     private static final String MESSAGE_BUNDLE = "MsgBundle";
 
     public DataInputStream in = null;
@@ -20,6 +23,8 @@ public class PortSession {
     public boolean isContinue = true;
 
     protected Staff currentStaff = null;
+
+    //protected Stack<UndoableCommand> undoableCommandStack = new Stack<>();
 
     private Locale currentLocale = Locale.US;
     public ResourceBundle messages = ResourceBundle.getBundle(MESSAGE_BUNDLE, currentLocale);
@@ -47,6 +52,7 @@ public class PortSession {
         messages = ResourceBundle.getBundle(MESSAGE_BUNDLE, currentLocale);
     }
 
+    @Override
     public void stop(){
         isContinue = false;
     }
