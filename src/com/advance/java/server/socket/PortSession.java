@@ -17,6 +17,8 @@ public class PortSession {
     public DataInputStream in = null;
     public PrintStream out = null;
 
+    public boolean isContinue = true;
+
     protected Staff currentStaff = null;
 
     private Locale currentLocale = Locale.US;
@@ -43,5 +45,9 @@ public class PortSession {
     public void setLocale(Locale locale){
         currentLocale = locale;
         messages = ResourceBundle.getBundle(MESSAGE_BUNDLE, currentLocale);
+    }
+
+    public void stop(){
+        isContinue = false;
     }
 }

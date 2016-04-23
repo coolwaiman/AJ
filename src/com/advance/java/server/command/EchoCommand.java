@@ -46,12 +46,12 @@ public class EchoCommand implements Command {
 
     @Override
     public String getDescription() {
-        return "This Command is used to echo the words from input";
+        return session.getString("EchoDesc");
     }
 
     @Override
     public String getShortDescription() {
-        return "Debug Command";
+        return session.getString("EchoSDesc");
     }
 
 

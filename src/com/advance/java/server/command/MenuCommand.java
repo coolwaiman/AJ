@@ -29,15 +29,30 @@ public class MenuCommand extends PortSession implements Command{
 
     @Override
     public void execute() throws IOException {
-        while (true){
+        while (isContinue){
             out.print(getMenu());
             String input = in.readLine();
             Role r = RoleHandler.getRole(currentStaff.getPosition().getPositionName());
             Map<String, Class<? extends Command>> cmds = r.getRoleCommands();
             try{
-                Constructor<?> ctor = cmds.get(input).getConstructor(PortSession.class);
-                Command cmdObj = (Command)ctor.newInstance(new Object[] { this });
-                cmdObj.execute();
+                if(input.endsWith("?")){
+                    input = input.substring(0, input.length()-1);
+                    if(cmds.containsKey(input)) {
+                        Constructor<?> ctor = cmds.get(input).getConstructor(PortSession.class);
+                        Command cmdObj = (Command) ctor.newInstance(new Object[]{this});
+                        out.println(getString("helpinfo") +": "+ cmdObj.getDescription());
+                    }else{
+                        out.println(getString("cmdNotRecognize"));
+                    }
+                }else{
+                    if(cmds.containsKey(input)) {
+                        Constructor<?> ctor = cmds.get(input).getConstructor(PortSession.class);
+                        Command cmdObj = (Command) ctor.newInstance(new Object[]{this});
+                        cmdObj.execute();
+                    }else{
+                        out.println(getString("cmdNotRecognize"));
+                    }
+                }
             } catch (NoSuchMethodException e) {
                 e.printStackTrace();
             } catch (InstantiationException e) {
@@ -74,7 +89,7 @@ public class MenuCommand extends PortSession implements Command{
             }
         }
         String joinedStr = String.join(" | ", cmdList);
-        return "<== "+joinedStr+ " ==>\n";
+        return "\n<== "+joinedStr+ " ==>\n";
     }
     @Override
     public String getName() {

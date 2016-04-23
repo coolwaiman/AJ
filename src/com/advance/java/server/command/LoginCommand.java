@@ -39,6 +39,7 @@ public class LoginCommand implements Command {
             username = in.readLine();
             out.print("password: ");
             password = in.readLine();
+            out.println("Attempting Login");
             a = AccountDAO.getByUsername(username);
             if(a!=null) {
                 if (a.getPasswd().equals(password)) {

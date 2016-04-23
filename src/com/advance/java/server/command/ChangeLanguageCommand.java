@@ -23,7 +23,6 @@ public class ChangeLanguageCommand implements UndoableCommand{
 
     @Override
     public void execute() throws IOException {
-        session.out.print("Changing");
         if(session.getLocale().equals(Locale.US)){
             session.setLocale(Locale.TRADITIONAL_CHINESE);
         }else if(session.getLocale().equals(Locale.TRADITIONAL_CHINESE)){
@@ -43,11 +42,11 @@ public class ChangeLanguageCommand implements UndoableCommand{
 
     @Override
     public String getDescription() {
-        return null;
+        return session.getString("ChangeLanguageDesc");
     }
 
     @Override
     public String getShortDescription() {
-        return null;
+        return session.getString("ChangeLanguageSDesc");
     }
 }
