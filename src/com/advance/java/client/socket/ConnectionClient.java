@@ -59,7 +59,8 @@ public class ConnectionClient implements Runnable, ConnectionSubject{
         }
         catch ( IOException e )
         {
-            e.printStackTrace();
+            System.out.println("Server not available");
+            //e.printStackTrace();
         }
         finally
         {
@@ -71,7 +72,6 @@ public class ConnectionClient implements Runnable, ConnectionSubject{
                 }finally{}
             }
         }
-        System.out.println("Connection End");
     }
 
     @Override

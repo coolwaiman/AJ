@@ -32,5 +32,25 @@ public class EchoCommand implements Command {
         }
     }
 
+    @Override
+    public String getName() {
+        return "Echo";
+    }
+
+    @Override
+    public String getTag() {
+        return "ec";
+    }
+
+    @Override
+    public String getDescription() {
+        return "This Command is used to echo the words from input";
+    }
+
+    @Override
+    public String getShortDescription() {
+        return "Debug Command";
+    }
+
 
 }

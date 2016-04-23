@@ -6,7 +6,9 @@
 package com.advance.java.server.command;
 
 import com.advance.java.server.dao.AccountDAO;
+import com.advance.java.server.dao.StaffDAO;
 import com.advance.java.server.model.Account;
+import com.advance.java.server.model.Staff;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.io.DataInputStream;
@@ -45,6 +47,30 @@ public class LoginCommand implements Command {
             out.println("Username / Password set not match");
         }
         out.println("Welcome "+a.getUsername());
+        Staff s = StaffDAO.getByUsername(a.getUsername());
+        MenuCommand c = new MenuCommand(in, out);
+        c.setStaff(s);
+        c.execute();
+    }
+
+    @Override
+    public String getName() {
+        return "Login";
+    }
+
+    @Override
+    public String getTag() {
+        return "login";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
+    }
+
+    @Override
+    public String getShortDescription() {
+        return null;
     }
 
 }
