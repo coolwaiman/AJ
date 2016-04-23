@@ -1,9 +1,6 @@
 package com.advance.java.server.model.role;
 
-import com.advance.java.server.command.ChangeLanguageCommand;
-import com.advance.java.server.command.Command;
-import com.advance.java.server.command.EchoCommand;
-import com.advance.java.server.command.QuitCommand;
+import com.advance.java.server.command.*;
 import com.advance.java.server.model.Account;
 
 import java.util.HashMap;
@@ -18,6 +15,7 @@ public class RoleHandler {
         RoleFunction.put("CEO", new HashMap<>());
         RoleFunction.put("Sales", new HashMap<>());
         RoleFunction.put("Technician", new HashMap<>());
+        RoleFunction.get("Technician").put(RepairCommand.TAG, RepairCommand.class);
         RoleFunction.put("HR Manager", new HashMap<>());
         RoleFunction.get("HR Manager").put(EchoCommand.TAG, EchoCommand.class);
 
