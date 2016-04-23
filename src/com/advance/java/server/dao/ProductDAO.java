@@ -17,4 +17,11 @@ public class ProductDAO extends DAO {
     public static List<Product> getAll() {
         return getSession().createQuery("from Product").list();
     }
+
+    public static List<Product> getByName(String name) {
+        return getSession().createQuery("from Product where productName like :name")
+                .setString("name", "%" + name + "%")
+                .list();
+
+    }
 }
