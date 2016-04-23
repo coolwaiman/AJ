@@ -50,6 +50,8 @@ public class ClientHandlerServer implements Runnable {
             c.execute();
         }finally{
             System.out.println("Done accepting");
+            ms.close();
+            ss.close();
         }
     }
     @Override
