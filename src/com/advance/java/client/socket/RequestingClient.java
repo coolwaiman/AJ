@@ -85,7 +85,7 @@ public class RequestingClient implements Runnable, ConnectionSubject {
                 }
             }
         }
-        System.out.println("Connection End");
+        //System.out.println("Connection End");
     }
 
     private String doRead(DataInputStream in) throws IOException {

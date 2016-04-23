@@ -30,12 +30,13 @@ public class LoginCommand implements Command {
     @Override
     public void execute() throws IOException {
         String username = "", password = "";
+        Account a;
         while(true) {
             out.print("login as: ");
             username = in.readLine();
             out.print("password: ");
             password = in.readLine();
-            Account a = AccountDAO.getByUsername(username);
+            a = AccountDAO.getByUsername(username);
             if(a!=null) {
                 if (a.getPasswd().equals(password)) {
                     break;
@@ -43,7 +44,7 @@ public class LoginCommand implements Command {
             }
             out.println("Username / Password set not match");
         }
-        out.println("Welcome");
+        out.println("Welcome "+a.getUsername());
     }
 
 }
