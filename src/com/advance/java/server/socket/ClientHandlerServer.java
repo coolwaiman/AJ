@@ -7,6 +7,7 @@ package com.advance.java.server.socket;
 
 import com.advance.java.server.command.Command;
 import com.advance.java.server.command.EchoCommand;
+import com.advance.java.server.command.LoginCommand;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -43,9 +44,9 @@ public class ClientHandlerServer implements Runnable {
             DataInputStream input;
             PrintStream output;
             input = new DataInputStream(ms.getInputStream());
-            output = new PrintStream(ms.getOutputStream());
+            output = new PrintStream(ms.getOutputStream(),true, "UTF-8");
             
-            Command c = new EchoCommand(input, output);
+            Command c = new LoginCommand(input, output);
             c.execute();
         }finally{
             System.out.println("Done accepting");

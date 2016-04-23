@@ -13,4 +13,8 @@ import java.io.IOException;
  */
 public interface Command {
     public void execute() throws IOException;
+    public String getName();
+    public String getTag();
+    public String getDescription();
+    public String getShortDescription();
 }

@@ -14,9 +14,11 @@ import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.RunnableFuture;
 
 /**
  *
@@ -44,16 +46,24 @@ public class RequestingClient implements Runnable, ConnectionSubject {
                             new InputStreamReader(System.in));
             PrintStream out
                     = new PrintStream(socket.getOutputStream());
-            DataInputStream in
-                    = new DataInputStream(socket.getInputStream());
+            //DataInputStream in  = new DataInputStream(socket.getInputStream());
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
             System.out.println("Loading...");
 
             try {
                 Thread.sleep(500);
             } catch (InterruptedException ex) {
             }
-            
-            System.out.print(doRead(in));
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while(true) {
+                        try {
+                            System.out.print(doRead(in));
+                        }catch (IOException e){}
+                    }
+                }
+            }).start();
             String userInput;
             while ((userInput = stdIn.readLine()) != null) {
                 out.println(userInput);
@@ -63,7 +73,6 @@ public class RequestingClient implements Runnable, ConnectionSubject {
                 } catch (InterruptedException ex) {
                 }
 
-                System.out.print(doRead(in));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -77,15 +86,16 @@ public class RequestingClient implements Runnable, ConnectionSubject {
                 }
             }
         }
-        System.out.println("Connection End");
+        //System.out.println("Connection End");
     }
 
-    private String doRead(DataInputStream in) throws IOException {
+    private String doRead(BufferedReader in) throws IOException {
         StringBuilder sb = new StringBuilder();
-        while (in.available() > 0) {
-            sb.append((char) in.read());
+        while (in.ready()) {
+            sb.append((char)in.read());
         }
-        return sb.toString();
+        String str = new String(sb.toString().getBytes(), "UTF-8");
+        return str;
     }
 
     @Override
