@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://ap-cdbr-azure-southeast-b.cloudapp.net:3306/ajdb</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="connection.username">bf56d14a8aee0e</property>
+    <property name="connection.password">9cee60fa</property>
+    <property name="show_sql">true</property>
+    <property name="transaction.auto_close_session">true</property>
+    <mapping class="com.advance.java.server.model.Product"/>
+    <mapping class="com.advance.java.server.model.Category"/>
+    <mapping class="com.advance.java.server.model.Provider"/>
+    <mapping class="com.advance.java.server.model.Customer"/>
+    <mapping class="com.advance.java.server.model.Account"/>
+    <mapping class="com.advance.java.server.model.Staff"/>
+    <mapping class="com.advance.java.server.model.Store"/>
+    <mapping class="com.advance.java.server.model.Storeproduct"/>
+    <mapping class="com.advance.java.server.model.Cusorder"/>
+    <mapping class="com.advance.java.server.model.Orderline"/>
+    <mapping class="com.advance.java.server.model.Technician"/>
+    <mapping class="com.advance.java.server.model.Storestockwarning"/>
+    <mapping class="com.advance.java.server.model.Productrepairwork"/>
+    <mapping class="com.advance.java.server.model.Position"/>
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
