@@ -3,7 +3,6 @@ package com.advance.java.server.command;
 import com.advance.java.server.model.role.Role;
 import com.advance.java.server.model.role.RoleHandler;
 import com.advance.java.server.socket.PortSession;
-import com.mysql.jdbc.StringUtils;
 
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -13,7 +12,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.StringJoiner;
 
 /**
  * Created by User on 23/4/2016.
@@ -29,6 +27,8 @@ public class MenuCommand extends PortSession implements Command{
 
     @Override
     public void execute() throws IOException {
+        out.println(getString("welcomeMsg"));
+
         while (isContinue){
             out.print(getMenu());
             String input = in.readLine();

@@ -1,8 +1,11 @@
 package com.advance.java.server.command;
 
 import java.io.IOException;
+
+import com.advance.java.server.dao.ProductrepairworkDAO;
 import com.advance.java.server.model.Productrepairwork;
 import com.advance.java.server.socket.PortSession;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 /**
@@ -15,7 +18,12 @@ public class RepairCommand extends PortSession implements Command  {
     public void execute() throws IOException {
         int staffid=currentStaff.getStaffId();
         while(true) {
-            Productrepairwork rpt = new Productrepairwork();
+            List<Productrepairwork> list=ProductrepairworkDAO.getAll();
+            List<Productrepairwork> staffWork=new ArrayList<>();
+            for(Productrepairwork work: list){
+                if(work.getAssignedTechnician().getStaffId()==staffid)
+                    staffWork.add(work);
+            }
 
         }
 

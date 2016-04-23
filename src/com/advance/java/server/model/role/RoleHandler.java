@@ -18,6 +18,7 @@ public class RoleHandler {
         RoleFunction.get("Technician").put(RepairCommand.TAG, RepairCommand.class);
         RoleFunction.put("HR Manager", new HashMap<>());
         RoleFunction.get("HR Manager").put(EchoCommand.TAG, EchoCommand.class);
+        RoleFunction.get("HR Manager").put(ProductManageCommand.TAG, ProductManageCommand.class);
 
         RoleFunction.put("Store Manager", new HashMap<>());
         RoleFunction.put("Stock Manager", new HashMap<>());
