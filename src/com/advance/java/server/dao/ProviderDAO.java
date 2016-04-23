@@ -8,6 +8,12 @@ import java.util.List;
  * Created by rAYMOND on 4/22/2016.
  */
 public class ProviderDAO extends DAO<Provider> {
+    public static Provider getByName(String name) {
+        return (Provider) getSession().createQuery("from Provider where prodviderName = :name")
+                .setString("name", name)
+                .uniqueResult();
+    }
+
     public static List<Provider> getAll() {
         return getSession().createQuery("from Provider").list();
     }

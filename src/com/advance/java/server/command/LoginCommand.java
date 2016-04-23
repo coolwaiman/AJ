@@ -34,22 +34,23 @@ public class LoginCommand implements Command {
     public void execute() throws IOException {
         String username = "", password = "";
         Account a;
-        while(true) {
+        while (true) {
             out.print("login as: ");
             username = in.readLine();
             out.print("password: ");
             password = in.readLine();
             out.println("Attempting Login");
             a = AccountDAO.getByUsername(username);
-            if(a!=null) {
+            if (a != null) {
                 if (a.getPasswd().equals(password)) {
                     break;
                 }
             }
             out.println("Username / Password set not match");
         }
-        out.println("Welcome "+a.getUsername());
-        Staff s = StaffDAO.getByUsername(a.getUsername());
+        out.println("Welcome " + username);
+        Staff s = StaffDAO.getByUsername(username);
+
         MenuCommand c = new MenuCommand(in, out);
         c.setStaff(s);
         c.execute();
