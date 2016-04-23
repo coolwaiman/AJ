@@ -23,6 +23,7 @@ public class RoleHandler {
         RoleFunction.put("Store Manager", new HashMap<>());
         RoleFunction.put("Stock Manager", new HashMap<>());
         RoleFunction.put("Game Researcher", new HashMap<>());
+        RoleFunction.get("HR Manager").put(ProductManageCommand.TAG, ProductManageCommand.class);
 
         Map<String, Map<String, Class<? extends Command>>>map = RoleFunction;
         for (Map.Entry<String, Map<String, Class<? extends Command>>> entry : map.entrySet())

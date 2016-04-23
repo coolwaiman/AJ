@@ -24,7 +24,7 @@ public class UpdateProductCommand implements Command{
 
     @Override
     public String getName() {
-        return null;
+        return session.getString("UpdateProduct");
     }
 
     @Override

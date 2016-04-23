@@ -49,7 +49,7 @@ public class ProductManageCommand implements Command, StopableCommand{
                         Command cmdObj = null;
                         if(!input.equals(BackCommand.TAG)) {
                             ctor = AVAILABLE_COMMAND.get(input).getConstructor(PortSession.class);
-                            cmdObj = (Command) ctor.newInstance(new Object[]{session, this});
+                            cmdObj = (Command) ctor.newInstance(new Object[]{session});
                         }else{
                             ctor = AVAILABLE_COMMAND.get(input).getConstructor(PortSession.class, StopableCommand.class);
                             cmdObj = (Command) ctor.newInstance(new Object[]{session, this});
@@ -64,7 +64,7 @@ public class ProductManageCommand implements Command, StopableCommand{
                         Command cmdObj = null;
                         if(!input.equals(BackCommand.TAG)) {
                             ctor = AVAILABLE_COMMAND.get(input).getConstructor(PortSession.class);
-                            cmdObj = (Command) ctor.newInstance(new Object[]{session, this});
+                            cmdObj = (Command) ctor.newInstance(new Object[]{session});
                         }else{
                             ctor = AVAILABLE_COMMAND.get(input).getConstructor(PortSession.class, StopableCommand.class);
                             cmdObj = (Command) ctor.newInstance(new Object[]{session, this});
