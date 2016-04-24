@@ -8,6 +8,7 @@ import com.advance.java.server.socket.PortSession;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Calendar;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -33,8 +34,12 @@ public class DoPurchaseOrderCommand implements Command{
         session.processingOrder.setOrderDiscount(1.0);
         session.processingOrder.setOrderlines(null);
         session.processingOrder.setOrderDate(new Timestamp(Calendar.getInstance().getTime().getTime()));
+        for(Orderline ol : lol){
+            ol.setCusOrder(session.processingOrder);
+        }
         CusOrderDAO.makeOrder(session.processingOrder, lol);
         session.processingOrder = new Cusorder();
+        session.processingOrder.setOrderlines(new LinkedList<Orderline>());
         session.out.println(session.getString("orderCreated"));
     }
 
