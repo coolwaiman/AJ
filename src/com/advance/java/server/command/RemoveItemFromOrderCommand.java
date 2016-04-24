@@ -24,13 +24,13 @@ public class RemoveItemFromOrderCommand implements Command {
     @Override
     public void execute() throws IOException {
         if(session.processingOrder.getOrderlines().isEmpty()){
-            session.out.println("Shopcart is empty");
+            session.out.println(session.getString("shopcartIsEmpty"));
             return;
         }
         session.out.print(getOrderStatus());
         Orderline tol = null;
         while(tol==null) {
-            session.out.print("Enter Product SN: ");
+            session.out.print(session.getString("enterProductSN")+": ");
             String sn = session.in.readLine();
             tol = null;
             try {
@@ -46,12 +46,12 @@ public class RemoveItemFromOrderCommand implements Command {
             }
             if(tol!=null)
                 break;
-            session.out.print("Product not Found, ");
+            session.out.print(session.getString("productNotFoundMsg"));
         }
         final int snInt = tol.getStoreProduct().getProductSn();
 
         session.processingOrder.getOrderlines().removeIf(entry -> entry.getStoreProduct().getProductSn() == snInt);
-        session.out.println("Product Move outed");
+        session.out.println(session.getString("productMoveOutedMsg"));
     }
 
     private String getOrderStatus() {

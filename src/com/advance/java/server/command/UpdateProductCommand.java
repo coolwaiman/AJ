@@ -28,7 +28,7 @@ public class UpdateProductCommand implements Command{
     public void execute() throws IOException {
         Product p = null;
         while(p==null) {
-            session.out.print("Enter Product Id: ");
+            session.out.print(session.getString("enterProductId")+": ");
             String id = session.in.readLine();
             try {
                 p = ProductDAO.getById(Integer.parseInt(id));
@@ -37,16 +37,16 @@ public class UpdateProductCommand implements Command{
             }
             if(p!=null)
                 break;
-            session.out.print("Product not Found, ");
+            session.out.print(session.getString("productNotFoundMsg"));
         }
-        session.out.println("Start to Modify, Leave Empty to not doing change");
+        session.out.println(session.getString("startToModifyMsg"));
         String inputStr = "";
-        session.out.print("Enter Product Name: ");
+        session.out.print(session.getString("enterProductName")+": ");
         inputStr = session.in.readLine();
         if(!inputStr.isEmpty())
             p.setProductName(inputStr);
 
-        session.out.print("Enter Category Name: ");
+        session.out.print(session.getString("enterCategoryName")+": ");
         inputStr = session.in.readLine();
         if(!inputStr.isEmpty()){
             Category c = CategoryDAO.getByName(inputStr);
@@ -58,7 +58,7 @@ public class UpdateProductCommand implements Command{
             p.setCategory(c);
         }
 
-        session.out.print("Enter Provider Name: ");
+        session.out.print(session.getString("enterProviderName")+": ");
         inputStr = session.in.readLine();
         if(!inputStr.isEmpty()) {
             Provider pr = ProviderDAO.getByName(inputStr);
@@ -70,12 +70,12 @@ public class UpdateProductCommand implements Command{
             p.setProvider(pr);
         }
 
-        session.out.print("Enter Product Description: ");
+        session.out.print(session.getString("enterProviderName")+": ");
         inputStr = session.in.readLine();
         if(!inputStr.isEmpty())
             p.setProductDescription(inputStr);
 
-        session.out.print("Enter Product Price: ");
+        session.out.print(session.getString("enterProductPrice")+": ");
         boolean isValid = false;
         inputStr = session.in.readLine();
         if(!inputStr.isEmpty()){
@@ -87,7 +87,7 @@ public class UpdateProductCommand implements Command{
             }
 
             while (!isValid) {
-                session.out.print("Product Price Not Valid: ");
+                session.out.print(session.getString("productPriceNotValid")+": ");
                 inputStr = session.in.readLine();
                 if(inputStr.isEmpty())
                     break;
@@ -102,7 +102,7 @@ public class UpdateProductCommand implements Command{
         }
 
         ProductDAO.save(p);
-        session.out.print("Product Saved");
+        session.out.print(session.getString("productSavedMsg"));
     }
 
     @Override
@@ -117,7 +117,7 @@ public class UpdateProductCommand implements Command{
 
     @Override
     public String getDescription() {
-        return null;
+        return session.getString("UpdateProductDesc");
     }
 
     @Override

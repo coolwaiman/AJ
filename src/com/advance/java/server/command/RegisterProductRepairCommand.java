@@ -2,11 +2,9 @@ package com.advance.java.server.command;
 
 import com.advance.java.server.dao.CusOrderDAO;
 import com.advance.java.server.dao.ProductDAO;
+import com.advance.java.server.dao.ProductrepairworkDAO;
 import com.advance.java.server.dao.StoreProductDAO;
-import com.advance.java.server.model.Orderline;
-import com.advance.java.server.model.Product;
-import com.advance.java.server.model.Productrepairwork;
-import com.advance.java.server.model.Storeproduct;
+import com.advance.java.server.model.*;
 import com.advance.java.server.socket.PortSession;
 
 import java.io.IOException;
@@ -29,7 +27,7 @@ public class RegisterProductRepairCommand implements Command{
     public void execute() throws IOException {
         Storeproduct p = null;
         while(p==null) {
-            session.out.print("Enter Product SN: ");
+            session.out.print(session.getString("enterProductSN")+": ");
             String sn = session.in.readLine();
             try {
                 p = StoreProductDAO.getBySn(Integer.parseInt(sn));
@@ -38,12 +36,16 @@ public class RegisterProductRepairCommand implements Command{
             }
             if(p!=null)
                 break;
-            session.out.print("Product SN not Found, ");
+            session.out.print(session.getString("productNotFoundMsg"));
         }
+
         Productrepairwork prw = new Productrepairwork();
         prw.setCreatedDate(new Timestamp(Calendar.getInstance().getTime().getTime()));
         prw.setCreatedStaff(session.getStaff());
+        prw.setOrder(p.getOrderline().getCusOrder());
+        prw.setStoreProduct(p);
 
+        ProductrepairworkDAO.update(prw);
     }
 
     @Override
@@ -58,7 +60,7 @@ public class RegisterProductRepairCommand implements Command{
 
     @Override
     public String getDescription() {
-        return null;
+        return session.getString("RegisterProductRepairDesc");
     }
 
     @Override

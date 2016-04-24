@@ -23,7 +23,7 @@ public class RemoveProductCommand implements Command{
     public void execute() throws IOException {
         Product p = null;
         while(p==null) {
-            session.out.print("Enter Product Id: ");
+            session.out.print(session.getString("enterProductId")+": ");
             String id = session.in.readLine();
             try {
                 p = ProductDAO.getById(Integer.parseInt(id));
@@ -32,7 +32,7 @@ public class RemoveProductCommand implements Command{
             }
             if(p!=null)
                 break;
-            session.out.print("Product not Found, ");
+            session.out.print(session.getString("productNotFoundMsg"));
         }
     }
 
