@@ -7,7 +7,7 @@ import javax.persistence.criteria.Order;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Storeproduct {
+public class Storeproduct implements Comparable<Storeproduct>{
     private int productSn;
     private Store store;
     private Product product;
@@ -73,5 +73,16 @@ public class Storeproduct {
         result = 31 * result + store.hashCode();
         result = 31 * result + (product != null ? product.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Storeproduct o) {
+        if(store.compareTo(o.getStore())==0) {
+            if(product.compareTo(o.product) == 0) {
+                return productSn - o.getProductSn();
+            } else {
+                return product.compareTo(o.product);
+            }
+        } else return store.compareTo(o.getStore());
     }
 }
