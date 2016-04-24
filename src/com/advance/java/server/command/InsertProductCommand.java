@@ -33,7 +33,7 @@ public class InsertProductCommand implements Command{
         inputStr = session.in.readLine();
         p.setProductName(inputStr);
 
-        session.out.print("Enter Category Name: ");
+        session.out.print(session.getString("enterCategoryName")+": ");
         inputStr = session.in.readLine();
         Category c = CategoryDAO.getByName(inputStr);
         if(c == null) {
@@ -43,7 +43,7 @@ public class InsertProductCommand implements Command{
         }
         p.setCategory(c);
 
-        session.out.print(session.getString("enterCategoryName")+": ");
+        session.out.print(session.getString("enterProviderName")+": ");
         inputStr = session.in.readLine();
         Provider pr = ProviderDAO.getByName(inputStr);
         if(pr == null) {

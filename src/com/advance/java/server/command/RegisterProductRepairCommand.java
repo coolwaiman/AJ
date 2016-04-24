@@ -45,7 +45,8 @@ public class RegisterProductRepairCommand implements Command{
         prw.setOrder(p.getOrderline().getCusOrder());
         prw.setStoreProduct(p);
 
-        ProductrepairworkDAO.update(prw);
+        ProductrepairworkDAO.save(prw);
+        session.out.print(session.getString("ProductRepairRegistered"));
     }
 
     @Override
