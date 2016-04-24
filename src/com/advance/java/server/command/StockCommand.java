@@ -129,8 +129,8 @@ public class StockCommand implements Command  {
     }
     private void getFunctionMenu(){
         session.out.println(session.messages.getString("inStockAndStockBefore"));
-        //session.out.printf(PRODUCT_TABLE_ROW_FORMAT,session.messages.getString("productId"),session.messages.getString("pn"),session.messages.getString("quantity")," "," ");
-        session.out.printf(PRODUCT_TABLE_ROW_FORMAT,session.messages.getString("productId"),session.messages.getString("pn"),session.messages.getString("quantity"),session.messages.getString("warning"),session.messages.getString("warningLevel"));
+        session.out.printf(PRODUCT_TABLE_ROW_FORMAT,session.messages.getString("productId"),session.messages.getString("pn"),session.messages.getString("quantity")," "," ");
+        //session.out.printf(PRODUCT_TABLE_ROW_FORMAT,session.messages.getString("productId"),session.messages.getString("pn"),session.messages.getString("quantity"),session.messages.getString("warning"),session.messages.getString("warningLevel"));
         List<Storeproduct> instock= StoreProductDAO.getByStore(selectedStore);
         List<Product> uniProduct=new ArrayList<>();
         HashMap<Product,Integer> count= new HashMap<>();
@@ -145,11 +145,11 @@ public class StockCommand implements Command  {
             }
         }
         for(Product is:uniProduct){
-            int pwl=WarningLevelDAO.getByStoreAndProduct(selectedStore,is.getProductId()).getWarningLevel();
+            //int pwl=WarningLevelDAO.getByStoreAndProduct(selectedStore,is.getProductId()).getWarningLevel();
             String war="";
-            if(count.get(is)<=pwl)
-                war="X";
-        session.out.printf(PRODUCT_TABLE_ROW_FORMAT,is.getProductId(),is.getProductName(),count.get(is),war, pwl);
+            //if(count.get(is)<=pwl)
+             //   war="X";
+        session.out.printf(PRODUCT_TABLE_ROW_FORMAT,is.getProductId(),is.getProductName(),count.get(is),war, "");
         }
         session.out.println(getFunction());
     }
