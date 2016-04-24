@@ -24,23 +24,23 @@ public class SelectProductCommand implements Command{
 
     @Override
     public void execute() throws IOException {
-        session.out.print("Enter Product Name: ");
+        session.out.print(session.getString("enterProductName"));
         String name = session.in.readLine();
         List<Product> productList = ProductDAO.getByName(name);
 
         if(!productList.isEmpty()) {
             String inputStr = "";
-            session.out.print("Do you need to Sort the Output?(Y/N) ");
+            session.out.print(session.getString("doUNeedToSort") + ": ");
             while(true){
                 inputStr = session.in.readLine();
                 if (inputStr.toLowerCase().equals("y")) {
                     boolean isColVaild = false;
-                    session.out.print("Which Column you want to Sort by ( productId , category, provider, name, price ): ");
+                    session.out.print(session.getString("productSelectSortColumn")+": ");
                     while(!isColVaild) {
                         isColVaild = true;
                         String sortBy = session.in.readLine();
                         final int sorter;
-                        session.out.print("ascending / descending (A/D) ?");
+                        session.out.print(session.getString("askAscDesc")+" ");
                         while (true){
                             inputStr = session.in.readLine();
                             if(inputStr.toLowerCase().equals("a")){
@@ -50,7 +50,7 @@ public class SelectProductCommand implements Command{
                                 sorter = -1;
                                 break;
                             }else{
-                                session.out.print("Input not Correct (A/D) ?");
+                                session.out.print(session.getString("inputErrorAD"));
                             }
                         }
                         switch (sortBy.toLowerCase()) {
@@ -71,14 +71,14 @@ public class SelectProductCommand implements Command{
                                 break;
                             default:
                                 isColVaild = false;
-                                session.out.print("Column not exist ( productId , category, provider, name, price ): ");
+                                session.out.print(session.getString("columnNotExist")+": ");
                         }
                     }
                     break;
                 } else if (inputStr.toLowerCase().equals("n")) {
                     break;
                 } else {
-                    session.out.print("Input not Correct (Y/N): ");
+                    session.out.print(session.getString("inputNotCorrect")+": ");
                 }
             }
 
@@ -106,7 +106,7 @@ public class SelectProductCommand implements Command{
 
     @Override
     public String getDescription() {
-        return null;
+        return session.getString("SelectProductDesc");
     }
 
     @Override

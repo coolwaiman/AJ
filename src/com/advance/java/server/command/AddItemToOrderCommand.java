@@ -24,7 +24,7 @@ public class AddItemToOrderCommand implements Command{
         Orderline ol = new Orderline();
         Storeproduct p = null;
         while(p==null) {
-            session.out.print("Enter Product SN: ");
+            session.out.print(session.getString("enterProductSN")+": ");
             String sn = session.in.readLine();
             try {
                 p = StoreProductDAO.getBySn(Integer.parseInt(sn));
@@ -33,11 +33,11 @@ public class AddItemToOrderCommand implements Command{
             }
             if(p!=null)
                 break;
-            session.out.print("Product SN not Found, ");
+            session.out.print(session.getString("productSNNotFound"));
         }
         ol.setStoreProduct(p);
 
-        session.out.printf("Enter Product Price (suggest $%s): ", p.getProduct().getProductPrice());
+        session.out.printf(session.getString("enterProductPriceSuggest")+": ", p.getProduct().getProductPrice());
         boolean isValid = false;
         inputStr = session.in.readLine();
         double d = 0;
@@ -47,7 +47,7 @@ public class AddItemToOrderCommand implements Command{
         }catch (Exception e){}
 
         while(!isValid){
-            session.out.printf("Product Price Not Valid (suggest $%s): ", p.getProduct().getProductPrice());
+            session.out.printf(session.getString("productPriceNotValidSuggest")+": ", p.getProduct().getProductPrice());
             inputStr = session.in.readLine();
             try {
                 d = Double.parseDouble(inputStr);
@@ -57,7 +57,7 @@ public class AddItemToOrderCommand implements Command{
         ol.setProductPrice(d);
 
         session.processingOrder.getOrderlines().add(ol);
-        session.out.println("Product Inserted");
+        session.out.println(session.getString("productInsertedMsg"));
     }
 
     @Override

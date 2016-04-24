@@ -29,7 +29,7 @@ public class InsertProductCommand implements Command{
         String inputStr = "";
         Product p = new Product();
 
-        session.out.print("Enter Product Name: ");
+        session.out.print(session.getString("enterProductName")+": ");
         inputStr = session.in.readLine();
         p.setProductName(inputStr);
 
@@ -43,7 +43,7 @@ public class InsertProductCommand implements Command{
         }
         p.setCategory(c);
 
-        session.out.print("Enter Provider Name: ");
+        session.out.print(session.getString("enterCategoryName")+": ");
         inputStr = session.in.readLine();
         Provider pr = ProviderDAO.getByName(inputStr);
         if(pr == null) {
@@ -53,11 +53,11 @@ public class InsertProductCommand implements Command{
         }
         p.setProvider(pr);
 
-        session.out.print("Enter Product Description: ");
+        session.out.print(session.getString("enterProductDescription")+": ");
         inputStr = session.in.readLine();
         p.setProductDescription(inputStr);
 
-        session.out.print("Enter Product Price: ");
+        session.out.print(session.getString("enterProductPrice")+": ");
         boolean isValid = false;
         inputStr = session.in.readLine();
         double d = 0;
@@ -67,7 +67,7 @@ public class InsertProductCommand implements Command{
         }catch (Exception e){}
 
         while(!isValid){
-            session.out.print("Product Price Not Valid: ");
+            session.out.print(session.getString("productPriceNotValid")+": ");
             inputStr = session.in.readLine();
             try {
                 d = Double.parseDouble(inputStr);
@@ -76,7 +76,7 @@ public class InsertProductCommand implements Command{
         }
         p.setProductPrice(d);
         ProductDAO.save(p);
-        session.out.print("Product Added");
+        session.out.print(session.getString("productAdded"));
     }
 
     @Override

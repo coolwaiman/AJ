@@ -22,9 +22,7 @@ public class HRManageCommand implements Command {
     }
 
     @Override
-    public String getName() {
-        return "HR Managing";
-    }
+    public String getName() {return session.getString("HRManage");}
 
     @Override
     public String getTag() {
@@ -33,11 +31,11 @@ public class HRManageCommand implements Command {
 
     @Override
     public String getDescription() {
-        return "This Command is to process the Human Resource Management";
+        return session.getString("HRManageDesc");
     }
 
     @Override
     public String getShortDescription() {
-        return "Managing HR";
+        return session.getString("HRManageSDesc");
     }
 }

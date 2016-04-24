@@ -29,10 +29,10 @@ public class CreateCustomerCommand implements Command {
         String inputStr;
 
         while (!isPassed) {
-            session.out.println("Enter Customer username");
+            session.out.println(session.getString("enterCustomerUserName"));
             inputStr = session.in.readLine();
             if (AccountDAO.getByUsername(inputStr) != null) {
-                session.out.print("Username taken. Try again.");
+                session.out.print(session.getString("userNameTaken"));
             } else {
                 a.setUsername(inputStr);
                 isPassed = true;
@@ -41,30 +41,30 @@ public class CreateCustomerCommand implements Command {
 
 
 
-        session.out.print("Enter Customer password: ");
+        session.out.print(session.getString("enterCustomerPassword")+": ");
         inputStr = session.in.readLine();
         a.setPasswd(inputStr);
         a.setBalance(0);
         a.setCreatedOn(new Timestamp(Calendar.getInstance().getTimeInMillis()));
 
 
-        session.out.print("Enter Customer name: ");
+        session.out.print(session.getString("enterCustomerName")+": ");
         inputStr = session.in.readLine();
         c.setCusName(inputStr);
 
-        session.out.print("Enter Customer Address: ");
+        session.out.print(session.getString("enterCustomerAddress")+": ");
         inputStr = session.in.readLine();
         c.setCusAddress(inputStr);
 
-        session.out.print("Enter Customer Email: ");
+        session.out.print(session.getString("enterCustomerEmail")+": ");
         inputStr = session.in.readLine();
         c.setCusEmail(inputStr);
 
-        session.out.print("Enter Customer Phone: ");
+        session.out.print(session.getString("enterCustomerPhone")+": ");
         inputStr = session.in.readLine();
         c.setCusPhone(inputStr);
 
-        session.out.print("Enter Customer Gender (M / F): ");
+        session.out.print(session.getString("enterCustomerGender")+": ");
         char gender = ' ';
         while(true) {
             inputStr = session.in.readLine();
@@ -76,21 +76,21 @@ public class CreateCustomerCommand implements Command {
                 gender = 'F';
                 break;
             }else{
-                session.out.print("Gender not Exist ( M / F ): ");
+                session.out.print(session.getString("genderNotExist")+":");
             }
         }
         c.setGender(gender);
         c.setCusAccount(a);
         if(CustomerDAO.insertCus(c,a))
-            session.out.println("customer has been created");
+            session.out.println(session.getString("customerCreated"));
         else {
-            session.out.println("customer cannot create");
+            session.out.println(session.getString("customerCannotCreate"));
         }
     }
 
     @Override
     public String getName() {
-        return "CreateCustomerCommand";
+        return session.getString("CreateCustomer");
     }
 
     @Override
@@ -100,7 +100,7 @@ public class CreateCustomerCommand implements Command {
 
     @Override
     public String getDescription() {
-        return null;
+        return session.getString("CreateCustomerDesc");
     }
 
     @Override

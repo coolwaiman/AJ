@@ -15,43 +15,44 @@ public class InitOrderCustomerCommand implements Command {
 
     PortSession session = null;
 
-    public InitOrderCustomerCommand(PortSession session){
+    public InitOrderCustomerCommand(PortSession session) {
         this.session = session;
     }
+
     @Override
     public void execute() throws IOException {
         Account a = new Account();
         Customer c = new Customer();
         boolean isPassed = false;
-        session.out.print("Enter Customer username: (with \\id<cusId> can choose by id)) ");
+        session.out.print(session.getString("enterCustomerUserNameORid"));
         String inputStr;
         while (!isPassed) {
             try {
                 inputStr = session.in.readLine();
                 if (inputStr.startsWith("\\id")) {
                     c = CustomerDAO.getById(Integer.parseInt(inputStr.substring(3)));
-                    if(c == null) {
-                        session.out.print("Customer not exist. Try again.");
+                    if (c == null) {
+                        session.out.print(session.getString("customerNotExist"));
                     } else {
                         isPassed = true;
                     }
                 } else {
                     c = CustomerDAO.getByUsername(inputStr);
-                    if(c == null) {
-                        session.out.print("Customer not exist. Try again.");
+                    if (c == null) {
+                        session.out.print(session.getString("customerNotExist"));
                     } else {
                         isPassed = true;
                     }
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                session.out.println("Error, try again.");
-                session.out.print("Enter Customer username: (with \\id<cusId> can choose by id)) ");
+                session.out.println(session.getString("errorTryAgain"));
+                session.out.print(session.getString("enterCustomerUserNameORid"));
             }
         }
-        session.processingOrder.setCustomer(c);
 
-        session.out.println("customer has been set");
+        session.processingOrder.setCustomer(c);
+        session.out.println(session.getString("customerHasSet"));
     }
 
     @Override
@@ -66,11 +67,11 @@ public class InitOrderCustomerCommand implements Command {
 
     @Override
     public String getDescription() {
-        return null;
+        return session.getString("InitOrderCustomerDesc");
     }
 
     @Override
     public String getShortDescription() {
-        return null;
+        return session.getString("InitOrderCustomerSDesc");
     }
 }
