@@ -1,6 +1,7 @@
 package com.advance.java.server.model;
 
 import javax.persistence.*;
+import javax.persistence.criteria.Order;
 
 /**
  * Created by rAYMOND on 4/22/2016.
@@ -10,6 +11,16 @@ public class Storeproduct {
     private int productSn;
     private Store store;
     private Product product;
+    private Orderline orderline;
+
+    @OneToOne(mappedBy = "storeProduct")
+    public Orderline getOrderline() {
+        return orderline;
+    }
+
+    public void setOrderline(Orderline orderline) {
+        this.orderline = orderline;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

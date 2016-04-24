@@ -9,7 +9,7 @@ import java.util.List;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Cusorder {
+public class Cusorder implements Comparable<Cusorder> {
     private int orderId;
     private Staff staff;
     private Customer customer;
@@ -158,5 +158,10 @@ public class Cusorder {
         result = 31 * result + (orderDate != null ? orderDate.hashCode() : 0);
         result = 31 * result + (orderPrePaid != null ? orderPrePaid.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Cusorder o) {
+        return this.getOrderId() - o.getOrderId();
     }
 }

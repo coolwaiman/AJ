@@ -7,7 +7,7 @@ import java.sql.Timestamp;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Productrepairwork {
+public class Productrepairwork implements Comparable<Productrepairwork>{
     private int repairWorkId;
     private Cusorder order;
     private Storeproduct storeProduct;
@@ -116,5 +116,10 @@ public class Productrepairwork {
         result = 31 * result + (createdDate != null ? createdDate.hashCode() : 0);
         result = 31 * result + (solvedDate != null ? solvedDate.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Productrepairwork o) {
+        return getRepairWorkId() - o.getRepairWorkId();
     }
 }

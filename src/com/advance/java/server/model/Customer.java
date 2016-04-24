@@ -7,7 +7,7 @@ import java.util.List;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Customer {
+public class Customer implements Comparable<Customer>{
     private int cusId;
     private String cusName;
     private String cusAddress;
@@ -125,5 +125,10 @@ public class Customer {
         result = 31 * result + (cusAccount != null ? cusAccount.hashCode() : 0);
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Customer o) {
+        return this.cusId - o.cusId;
     }
 }

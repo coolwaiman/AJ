@@ -17,4 +17,10 @@ public class ProviderDAO extends DAO<Provider> {
     public static List<Provider> getAll() {
         return getSession().createQuery("from Provider").list();
     }
+    public static Provider getById (int id) {
+        return (Provider)getSession()
+                .createQuery("from Provider where providerId = :id")
+                .setInteger("id", id)
+                .uniqueResult();
+    }
 }

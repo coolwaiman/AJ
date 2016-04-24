@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Orderline implements Serializable {
+public class Orderline implements Serializable, Comparable<Orderline> {
     private Cusorder cusOrder;
     private Storeproduct storeProduct;
     private double productPrice;
@@ -24,7 +24,7 @@ public class Orderline implements Serializable {
     }
 
     @Id
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "ProductSn", referencedColumnName = "ProductSn", nullable = false)
     public Storeproduct getStoreProduct() {
         return storeProduct;
@@ -67,5 +67,14 @@ public class Orderline implements Serializable {
         temp = Double.doubleToLongBits(productPrice);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
+    }
+
+    @Override
+    public int compareTo(Orderline o) {
+        if(this.getCusOrder().compareTo(o.getCusOrder()) == 0) {
+            return this.getCusOrder().compareTo(o.getCusOrder());
+        } else {
+            return this.getCusOrder().compareTo(o.getCusOrder());
+        }
     }
 }

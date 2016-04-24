@@ -7,7 +7,7 @@ import java.util.List;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Position {
+public class Position implements Comparable<Position> {
     private int positionId;
     private String positionName;
     private List<Staff> staffs;
@@ -62,5 +62,10 @@ public class Position {
         int result = positionId;
         result = 31 * result + (positionName != null ? positionName.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Position o) {
+        return positionId - o.positionId;
     }
 }
