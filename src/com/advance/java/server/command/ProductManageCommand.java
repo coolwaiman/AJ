@@ -27,7 +27,7 @@ public class ProductManageCommand implements Command, StopableCommand{
     static{
         AVAILABLE_COMMAND.put(BackCommand.TAG, BackCommand.class);
         AVAILABLE_COMMAND.put(InsertProductCommand.TAG, InsertProductCommand.class);
-        AVAILABLE_COMMAND.put(RemoveProductCommand.TAG, RemoveProductCommand.class);
+        //AVAILABLE_COMMAND.put(RemoveProductCommand.TAG, RemoveProductCommand.class);
         AVAILABLE_COMMAND.put(SelectProductCommand.TAG, SelectProductCommand.class);
         AVAILABLE_COMMAND.put(UpdateProductCommand.TAG, UpdateProductCommand.class);
     }
@@ -39,6 +39,7 @@ public class ProductManageCommand implements Command, StopableCommand{
     @Override
     public void execute() throws IOException {
         while(isContinue){
+            session.out.print("\n<== "+getName()+" ==>\n");
             session.out.print(getMenu());
             String input = session.in.readLine();
             try{
@@ -108,7 +109,7 @@ public class ProductManageCommand implements Command, StopableCommand{
             }
         }
         String joinedStr = String.join(" | ", cmdList);
-        return "\n<== "+joinedStr+ " ==>\n";
+        return "<== "+joinedStr+ " ==>\n";
     }
 
     @Override

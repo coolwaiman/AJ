@@ -22,6 +22,7 @@ public class RoleHandler {
         RoleFunction.put("HR Manager", new HashMap<>());
         RoleFunction.get("HR Manager").put(EchoCommand.TAG, EchoCommand.class); //TODO: test code
         RoleFunction.get("HR Manager").put(ProductManageCommand.TAG, ProductManageCommand.class); //TODO: test code
+        RoleFunction.get("HR Manager").put(PurchaseOrderCommand.TAG, PurchaseOrderCommand.class);//TODO: test code
 
         RoleFunction.put("Store Manager", new HashMap<>());
         RoleFunction.get("Store Manager").put(ProductManageCommand.TAG, ProductManageCommand.class);

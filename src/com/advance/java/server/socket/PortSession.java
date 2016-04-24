@@ -2,8 +2,10 @@ package com.advance.java.server.socket;
 
 import com.advance.java.server.command.StopableCommand;
 import com.advance.java.server.command.UndoableCommand;
+import com.advance.java.server.model.Cusorder;
 import com.advance.java.server.model.Staff;
 
+import javax.persistence.criteria.Order;
 import java.io.DataInputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
@@ -25,6 +27,8 @@ public class PortSession implements StopableCommand{
     protected Staff currentStaff = null;
 
     //protected Stack<UndoableCommand> undoableCommandStack = new Stack<>();
+
+    public Cusorder processingOrder = null;
 
     private Locale currentLocale = Locale.US;
     public ResourceBundle messages = ResourceBundle.getBundle(MESSAGE_BUNDLE, currentLocale);
