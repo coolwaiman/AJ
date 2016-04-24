@@ -13,11 +13,14 @@ public class RoleHandler {
     public static Map<String, Map<String, Class<? extends Command>>>RoleFunction = new HashMap<>();
     static{
         RoleFunction.put("CEO", new HashMap<>());
-        RoleFunction.get("CEO").put(EchoCommand.TAG, EchoCommand.class);
+        //RoleFunction.get("CEO").put(EchoCommand.TAG, EchoCommand.class);
+        RoleFunction.get("CEO").put(SelectProductCommand.TAG, SelectProductCommand.class);
         RoleFunction.get("CEO").put(RegisterProductRepairCommand.TAG, RegisterProductRepairCommand.class);
         RoleFunction.get("CEO").put(ProductManageCommand.TAG, ProductManageCommand.class);
         RoleFunction.get("CEO").put(PurchaseOrderCommand.TAG, PurchaseOrderCommand.class);
         RoleFunction.get("CEO").put(CreateCustomerCommand.TAG, CreateCustomerCommand.class);
+        RoleFunction.get("CEO").put(RepairCommand.TAG, RepairCommand.class);
+        RoleFunction.get("CEO").put(StockCommand.TAG, StockCommand.class);
 
         RoleFunction.put("Sales", new HashMap<>());
         RoleFunction.get("Sales").put(SelectProductCommand.TAG, SelectProductCommand.class);
@@ -29,12 +32,6 @@ public class RoleHandler {
         RoleFunction.get("Technician").put(RepairCommand.TAG, RepairCommand.class);
 
         RoleFunction.put("HR Manager", new HashMap<>());
-        RoleFunction.get("HR Manager").put(EchoCommand.TAG, EchoCommand.class); //TODO: test code
-        RoleFunction.get("HR Manager").put(RegisterProductRepairCommand.TAG, RegisterProductRepairCommand.class); //TODO: test code
-        RoleFunction.get("HR Manager").put(ProductManageCommand.TAG, ProductManageCommand.class); //TODO: test code
-        RoleFunction.get("HR Manager").put(PurchaseOrderCommand.TAG, PurchaseOrderCommand.class);//TODO: test code
-        RoleFunction.get("HR Manager").put(CreateCustomerCommand.TAG, CreateCustomerCommand.class);//TODO: test code
-        //RoleFunction.get("HR Manager").put(HRManageCommand.TAG, HRManageCommand.class);//TODO: test code
 
         RoleFunction.put("Store Manager", new HashMap<>());
         RoleFunction.get("Store Manager").put(ProductManageCommand.TAG, ProductManageCommand.class);

@@ -24,7 +24,7 @@ public class SelectProductCommand implements Command{
 
     @Override
     public void execute() throws IOException {
-        session.out.print(session.getString("enterProductName"));
+        session.out.print(session.getString("enterProductName")+": ");
         String name = session.in.readLine();
         List<Product> productList = ProductDAO.getByName(name);
 
