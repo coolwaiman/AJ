@@ -1,5 +1,7 @@
 package com.advance.java.server.command;
 
+import com.advance.java.server.dao.ProductDAO;
+import com.advance.java.server.model.Product;
 import com.advance.java.server.socket.PortSession;
 
 import java.io.IOException;
@@ -19,12 +21,24 @@ public class RemoveProductCommand implements Command{
 
     @Override
     public void execute() throws IOException {
-
+        Product p = null;
+        while(p==null) {
+            session.out.print("Enter Product Id: ");
+            String id = session.in.readLine();
+            try {
+                p = ProductDAO.getById(Integer.parseInt(id));
+            }catch (Exception e){
+                /*pass*/
+            }
+            if(p!=null)
+                break;
+            session.out.print("Product not Found, ");
+        }
     }
 
     @Override
     public String getName() {
-        return null;
+        return session.getString("RemoveProduct");
     }
 
     @Override

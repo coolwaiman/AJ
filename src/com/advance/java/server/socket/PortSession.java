@@ -32,6 +32,7 @@ public class PortSession implements StopableCommand{
     public void setStaff(Staff s){
         currentStaff = s;
     }
+    public Staff getStaff(){return currentStaff;}
 
     public String getString(String key){
         String str = messages.getString(key);
