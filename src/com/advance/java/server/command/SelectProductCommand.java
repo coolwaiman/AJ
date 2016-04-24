@@ -15,18 +15,26 @@ public class SelectProductCommand implements Command{
 
     PortSession session = null;
 
+    private static final String TABLE_ROW_FORMAT = "%10s | %10s | %10s | %18s | %15s\n";
+
     public SelectProductCommand(PortSession session){
         this.session = session;
     }
 
     @Override
     public void execute() throws IOException {
-        session.out.print("Enter Product Name");
+        session.out.print("Enter Product Name: ");
         String name = session.in.readLine();
-        /**List<Product> productList = ProductDAO.getByName(name);
+        List<Product> productList = ProductDAO.getByName(name);
+
+        session.out.printf(TABLE_ROW_FORMAT, session.getString("productId"),
+                session.getString("category"), session.getString("provider"),
+                session.getString("name"), session.getString("price"));
         for(Product p : productList){
-            session.out.println(p.getProductName());
-        }**/
+            session.out.printf(TABLE_ROW_FORMAT, p.getProductId(),
+                    p.getCategory().getCategoryName(), p.getProvider().getProviderName(),
+                    p.getProductName(), p.getProductPrice());
+        }
     }
 
     @Override
