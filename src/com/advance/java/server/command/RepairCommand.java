@@ -31,9 +31,7 @@ public class RepairCommand extends PortSession implements Command  {
 
 
             }
-        }
-
-    }
+     }
 
     @Override
     public String getName() {
@@ -58,12 +56,13 @@ public class RepairCommand extends PortSession implements Command  {
         list=ProductrepairworkDAO.getAll();
         staffWork=new ArrayList<>();
         staffNonDoneWork=new ArrayList<>();
-        for(Productrepairwork work: list){
-            if(work.getAssignedTechnician().getStaffId()==currentStaff.getStaffId()) {
+        for(Productrepairwork work: list) {
+            if (work.getAssignedTechnician().getStaffId() == currentStaff.getStaffId()) {
                 staffWork.add(work);
-                if(work.getSolvedDate()==null||work.getSolvedDate().getTime()==0)
+                if (work.getSolvedDate() == null || work.getSolvedDate().getTime() == 0)
                     staffNonDoneWork.add(work);
             }
+        }
     }
     private void getProduct(){
     List<Product> pList=ProductDAO.getAll();
