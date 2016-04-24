@@ -27,7 +27,7 @@ public class RepairCommand implements Command  {
     private static Map<String, Class<? extends Command>> AVAILABLE_COMMAND = new HashMap<>();
     static{
         AVAILABLE_COMMAND.put(SelectRepairWork.TAG, SelectRepairWork.class);
-
+        AVAILABLE_COMMAND.put(CompleteRepair.TAG, CompleteRepair.class);
     }
 
     public RepairCommand(PortSession session){
@@ -37,7 +37,7 @@ public class RepairCommand implements Command  {
     public void execute() throws IOException {
         while(true) {
             getJob();
-            session.out.println("All Non-Complete Repair Works");
+            session.out.println("\n"+session.messages.getString("noncomrepairwork"));
             printRecord(staffNonDoneWork);
             session.out.println(getMenu());
             String input=session.in.readLine();
@@ -45,11 +45,40 @@ public class RepairCommand implements Command  {
             try{
                 if(input.equals("b")||input.equals("B"))
                     return;
+                if(input.toLowerCase().equals("all")){
+                    session.out.println("\n"+session.messages.getString("comrepairwork"));
+                    printRecord(staffWork);
+                    continue;
+                }
+                if(input.toLowerCase().equals("asc")){
+                    session.out.println("\n"+session.messages.getString("noncomrepairwork"));
+                    Collections.sort(staffNonDoneWork);
+                    printRecord(staffNonDoneWork);
+                    continue;
+                }
+                if(input.toLowerCase().equals("desc")){
+                    session.out.println("\n"+session.messages.getString("noncomrepairwork"));
+                    Collections.reverse(staffNonDoneWork);
+                    printRecord(staffNonDoneWork);
+                    continue;
+                }
+                if(input.toLowerCase().equals("alldesc")){
+                    session.out.println("\n"+session.messages.getString("comrepairwork"));
+                    Collections.reverse(staffWork);
+                    printRecord(staffWork);
+                    continue;
+                }
+                if(input.toLowerCase().equals("allasc")){
+                    session.out.println("\n"+session.messages.getString("comrepairwork"));
+                    Collections.sort(staffWork);
+                    printRecord(staffWork);
+                    continue;
+                }
                 if(input.endsWith("?")){
                     input = input.substring(0, input.length()-1);
                     if(cmds.containsKey(input)) {
                         Constructor<?> ctor = cmds.get(input).getConstructor(PortSession.class);
-                        Command cmdObj = (Command) ctor.newInstance(new Object[]{this});
+                        Command cmdObj = (Command) ctor.newInstance(session);
                         session.out.println(session.messages.getString("helpinfo") +": "+ cmdObj.getDescription());
                     }else{
                         session.out.println(session.messages.getString("cmdNotRecognize"));
@@ -57,7 +86,7 @@ public class RepairCommand implements Command  {
                 }else{
                     if(cmds.containsKey(input)) {
                         Constructor<?> ctor = cmds.get(input).getConstructor(PortSession.class);
-                        Command cmdObj = (Command) ctor.newInstance(new Object[]{this});
+                        Command cmdObj = (Command) ctor.newInstance(session);
                         cmdObj.execute();
                     }else{
                         session.out.println(session.messages.getString("cmdNotRecognize"));
@@ -128,14 +157,19 @@ public class RepairCommand implements Command  {
             }
         }
         String joinedStr = String.join(" | ", cmdList);
-        return "\n<== "+joinedStr+ " |[b]"+session.messages.getString("back")+"==>\n";
+        return "\n<== "+joinedStr+ " | [b]"+session.messages.getString("back")+
+                " | [all]"+session.messages.getString("allrepairwork")+
+                " | [asc]"+session.messages.getString("repairworkasc")+
+                "\n[desc]"+session.messages.getString("repairworkdesc")+
+                " | [allasc]"+session.messages.getString("allrepairworkasc")+
+                " | [alldesc]"+session.messages.getString("allrepairworkdesc")+"==>\n";
     }
     private void printRecord(List<Productrepairwork> list) {
         session.out.printf(TABLE_ROW_FORMAT,"Repair ID","Product SN","Product ID","Product Name","Create Date","Solved Date");
         for(Productrepairwork work:list) {
             String createDate=work.getCreatedDate().toLocalDateTime().format(DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm",session.getLocale()));
             String solvedDate="";
-            if(work.getSolvedDate()!=null||work.getSolvedDate().getTime()!=0)
+            if(work.getSolvedDate()!=null&&work.getSolvedDate().getTime()!=0)
             solvedDate=work.getCreatedDate().toLocalDateTime().format(DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm",session.getLocale()));
             else
                 solvedDate="N/A";

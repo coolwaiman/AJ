@@ -21,7 +21,6 @@
     <mapping class="com.advance.java.server.model.Storeproduct"/>
     <mapping class="com.advance.java.server.model.Cusorder"/>
     <mapping class="com.advance.java.server.model.Orderline"/>
-    <mapping class="com.advance.java.server.model.Technician"/>
     <mapping class="com.advance.java.server.model.Storestockwarning"/>
     <mapping class="com.advance.java.server.model.Productrepairwork"/>
     <mapping class="com.advance.java.server.model.Position"/>

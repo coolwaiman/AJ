@@ -5,35 +5,37 @@ import com.advance.java.server.model.Productrepairwork;
 import com.advance.java.server.socket.PortSession;
 
 import java.io.IOException;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
+import java.sql.Timestamp;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.Calendar;
 
 /**
  * Created by Calvin on 24/4/2016.
  */
-public class SelectRepairWork implements Command  {
-    public static final String TAG = "sel";
+public class CompleteRepair  implements Command  {
+    public static final String TAG = "com";
     private static final String TABLE_ROW_FORMAT = "%-28s:  %-30s \n";
     PortSession session = null;
 
-    public SelectRepairWork(PortSession session) {
+
+    public CompleteRepair(PortSession session) {
         this.session = session;
     }
 
     @Override
     public void execute() throws IOException {
-        session.out.println("askrepair");
+        session.out.println(session.messages.getString("askcomrwid"));
         String input=session.in.readLine();
         int id=0;
         try{
             Productrepairwork work= ProductrepairworkDAO.getById(Integer.parseInt(input));
-            if(work!=null)
+            if(work!=null) {
+                work.setSolvedDate(new Timestamp(Calendar.getInstance().getTimeInMillis()));
+                if(ProductrepairworkDAO.update(work))
                 printWork(work);
+                else
+                    session.out.println(session.messages.getString("updateUnsuccess"));
+            }
             else
                 session.out.println(session.messages.getString("repairnotfound"));
         }catch(NumberFormatException e){
@@ -43,17 +45,17 @@ public class SelectRepairWork implements Command  {
 
     @Override
     public String getName() {
-        return session.messages.getString("selectRepair");
+        return session.messages.getString("completeRepair");
     }
 
     @Override
     public String getDescription() {
-        return session.messages.getString("selectRepairDesc");
+        return session.messages.getString("completeRepairDesc");
     }
 
     @Override
     public String getShortDescription() {
-        return session.messages.getString("selectRepairSDesc");
+        return session.messages.getString("completeRepairSDesc");
     }
 
     @Override
@@ -63,7 +65,7 @@ public class SelectRepairWork implements Command  {
     private void printWork(Productrepairwork work){
         String createDate=work.getCreatedDate().toLocalDateTime().format(DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm",session.getLocale()));
         String solvedDate="";
-        if(work.getSolvedDate()!=null&&work.getSolvedDate().getTime()!=0)
+        if(work.getSolvedDate()!=null||work.getSolvedDate().getTime()!=0)
             solvedDate=work.getSolvedDate().toLocalDateTime().format(DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm",session.getLocale()));
         else
             solvedDate="N/A";

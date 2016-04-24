@@ -38,17 +38,34 @@ select = Select
 insert = Insert
 update = Update
 remove = Remove
-
-<<<<<<< HEAD
 repairProcess = Repair Process
 repairProcessDesc = Check and modify the repair record
 repairProcessSDesc = View repair record
-=======
+
 productId = Product ID
+productSN = Product SN
 name = Name
 price = Price
 
 PurchaseOrder= Purchase Order
 
 RegisterProductRepair = Register Product Repair
->>>>>>> a9c58206b98894752c18e47f33a072fde6e054dd
+
+<<<<<<< HEAD
+back = Back
+selectRepair = Select Repair Work
+selectRepairDesc = Select Repair Work and view the detail
+selectRepairSDesc = View repair Work record
+=======
+AddItemToOrder= Add Orderline Item
+
+DoPurchaseOrder = Purchase Order
+
+InitOrderCustomer = Set Customer
+
+RemoveItemFromOrder = Remove Orderline Item
+
+customer = Customer
+
+customerNotDefined = Customer Not Defined
+>>>>>>> 2cb04de2f9f6aa33080a53560bbd45a8e2458198
