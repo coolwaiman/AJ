@@ -90,7 +90,7 @@ public class CreateCustomerCommand implements Command {
 
     @Override
     public String getName() {
-        return "CreateCustomerCommand";
+        return session.getString("CreateCustomer");
     }
 
     @Override
@@ -100,7 +100,7 @@ public class CreateCustomerCommand implements Command {
 
     @Override
     public String getDescription() {
-        return null;
+        return session.getString("CreateCustomerDesc");
     }
 
     @Override
