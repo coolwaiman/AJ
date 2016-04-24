@@ -138,8 +138,7 @@ inputErrorAD = \u8f38\u5165\u932f\u8aa4 (A/D) ?
 CreateCustomer = \u5275\u9020\u5ba2\u6236
 CreateCustomerDesc = \u5275\u9020\u65b0\u5ba2\u6236
 
-ProductRepairRegistered = \u5df2\u7533\u8acb\u7522\u54c1\u7dad\u4fee
-
+<<<<<<< HEAD
 repairProcess =\u4fee\u5fa9\u904e\u7a0b
 repairProcessDesc =\u6aa2\u67e5\u4e26\u4fee\u6539\u7dad\u4fee\u8a18\u9304
 repairProcessSDesc =\u67e5\u770b\u7dad\u4fee\u8a18\u9304
@@ -183,3 +182,6 @@ quantity = \u6578\u91cf
 askpid = \u8acb\u8f38\u5165\u7522\u54c1\u7de8\u865f
 askqty = \u8acb\u8f38\u5165\u6578\u91cf
 entcor = \u8acb\u8f38\u5165\u6b63\u78ba\u7684\u503c
+=======
+ProductRepairRegistered = \u5df2\u7533\u8acb\u7522\u54c1\u7dad\u4fee
+>>>>>>> 8eb1964209bc304b9ff3e8e9303d62bc561547c3

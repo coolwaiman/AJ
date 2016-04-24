@@ -17,7 +17,7 @@ import java.util.*;
 /**
  * Created by Calvin on 23/4/2016.
  */
-public class RepairCommand implements Command  {
+public class RepairCommand extends PortSession implements Command  {
     public static final String TAG = "rep";
     private static final String TABLE_ROW_FORMAT = "%-10s  %-11s  %-11s  %-18s %-20s\n";
     PortSession session = null;
@@ -129,8 +129,9 @@ public class RepairCommand implements Command  {
         list=ProductrepairworkDAO.getAll();
         staffWork=new ArrayList<>();
         staffNonDoneWork=new ArrayList<>();
+        int id=session.getStaff().getStaffId();
         for(Productrepairwork work: list) {
-            if (work.getAssignedTechnician().getStaffId() == session.getStaff().getStaffId()) {
+            if (work.getAssignedTechnician().getStaffId() == id) {
                 staffWork.add(work);
                 if (work.getSolvedDate() == null || work.getSolvedDate().getTime() == 0)
                     staffNonDoneWork.add(work);

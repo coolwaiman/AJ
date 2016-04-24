@@ -22,7 +22,4 @@ public class WarningLevelDAO extends DAO {
                 .list();
     }
 
-    public static List<Storestockwarning> getByStoreId(int sid) {
-        
-    }
 }

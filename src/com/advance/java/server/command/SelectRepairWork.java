@@ -27,7 +27,7 @@ public class SelectRepairWork implements Command  {
 
     @Override
     public void execute() throws IOException {
-        session.out.println("askrepair");
+        session.out.println(session.messages.getString("askrepair"));
         String input=session.in.readLine();
         int id=0;
         try{
