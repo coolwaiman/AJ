@@ -12,6 +12,11 @@ import java.util.List;
 public class StockCommand extends PortSession implements Command  {
     public static final String TAG = "repair";
     PortSession session = null;
+
+    public StockCommand(PortSession session) {
+        this.session = session;
+    }
+
     @Override
     public void execute() throws IOException {
         int staffid=currentStaff.getStaffId();
