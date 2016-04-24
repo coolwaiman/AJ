@@ -2,10 +2,13 @@ package com.advance.java.server.command;
 
 import java.io.IOException;
 
+import com.advance.java.server.dao.ProductDAO;
 import com.advance.java.server.dao.ProductrepairworkDAO;
+import com.advance.java.server.model.Product;
 import com.advance.java.server.model.Productrepairwork;
 import com.advance.java.server.socket.PortSession;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 /**
@@ -14,17 +17,20 @@ import java.util.Locale;
 public class RepairCommand extends PortSession implements Command  {
     public static final String TAG = "repair";
     PortSession session = null;
+    private List<Productrepairwork> list;
+    List<Productrepairwork> staffWork;
+    List<Productrepairwork> staffNonDoneWork;
+    HashMap<Integer,Product>productList;
     @Override
     public void execute() throws IOException {
-        int staffid=currentStaff.getStaffId();
+        getJob();
+        getProduct();
+        out.println("Non-completed Repair Works");
+        printRecord(staffNonDoneWork);
         while(true) {
-            List<Productrepairwork> list=ProductrepairworkDAO.getAll();
-            List<Productrepairwork> staffWork=new ArrayList<>();
-            for(Productrepairwork work: list){
-                if(work.getAssignedTechnician().getStaffId()==staffid)
-                    staffWork.add(work);
-            }
 
+
+            }
         }
 
     }
@@ -48,9 +54,27 @@ public class RepairCommand extends PortSession implements Command  {
     public String getTag() {
         return TAG;
     }
-
-    private void printRecord(List<Productrepairwork> list){
-        out.println();
-        out.print("");
+    private void getJob(){
+        list=ProductrepairworkDAO.getAll();
+        staffWork=new ArrayList<>();
+        staffNonDoneWork=new ArrayList<>();
+        for(Productrepairwork work: list){
+            if(work.getAssignedTechnician().getStaffId()==currentStaff.getStaffId()) {
+                staffWork.add(work);
+                if(work.getSolvedDate()==null||work.getSolvedDate().getTime()==0)
+                    staffNonDoneWork.add(work);
+            }
+    }
+    private void getProduct(){
+    List<Product> pList=ProductDAO.getAll();
+    for(Product p:pList){
+        productList.put(p.getProductId(),p);
+    }
+    }
+    private void printRecord(List<Productrepairwork> list) {
+        out.println("ID SN Product ID Product Name");
+        for(Productrepairwork work:list) {
+            out.print(""+work.getRepairWorkId()+work.getStoreProduct().getProductSn()+work.getStoreProduct().getProduct().getProductId()+work.getStoreProduct().getProduct().getProductName());
+        }
     }
 }
