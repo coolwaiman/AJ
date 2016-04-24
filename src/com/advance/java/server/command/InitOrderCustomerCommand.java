@@ -54,6 +54,7 @@ public class InitOrderCustomerCommand implements Command {
         c.setGender(gender);
 
         session.processingOrder.setCustomer(c);
+
         session.out.println("customer has been set");
     }
 

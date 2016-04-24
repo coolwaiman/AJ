@@ -37,7 +37,6 @@ public class PurchaseOrderCommand implements Command, StopableCommand {
     public void execute() throws IOException {
         session.processingOrder = new Cusorder();
         session.processingOrder.setOrderlines(new LinkedList<Orderline>());
-        session.processingOrder.setStaff(session.getStaff());
         while(isContinue){
             session.out.print("\n<== "+getName()+" ==>\n");
             session.out.print(getOrderStatus());
@@ -117,6 +116,11 @@ public class PurchaseOrderCommand implements Command, StopableCommand {
     private String getOrderStatus() {
         String FORMAT = "%10s | %15s | %10s\n";
         StringBuilder sb = new StringBuilder();
+        if(session.processingOrder.getCustomer() != null) {
+            sb.append(session.getString("customer") + " : " + session.processingOrder.getCustomer().getCusName()+"\n");
+        }else{
+            sb.append(session.getString("customerNotDefined")+"\n");
+        }
         sb.append(String.format(FORMAT, session.getString("productSN"), session.getString("name"), session.getString("price")));
         for (Orderline ol : session.processingOrder.getOrderlines()) {
             sb.append(String.format(FORMAT, ol.getStoreProduct().getProductSn(), ol.getStoreProduct().getProduct().getProductName(), "$" + ol.getProductPrice()));
