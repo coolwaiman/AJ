@@ -7,7 +7,7 @@ import java.util.List;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Category {
+public class Category implements Comparable<Category>  {
     private int categoryId;
     private String categoryName;
     private String categoryDescription;
@@ -89,5 +89,10 @@ public class Category {
         result = 31 * result + (categoryDescription != null ? categoryDescription.hashCode() : 0);
         result = 31 * result + (parentCategory != null ? parentCategory.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Category o) {
+        return this.categoryId - o.categoryId;
     }
 }

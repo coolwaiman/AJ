@@ -7,7 +7,7 @@ import java.sql.Timestamp;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Account {
+public class Account implements Comparable<Account>{
     private int accountId;
     private String username;
     private Timestamp createdOn;
@@ -94,4 +94,8 @@ public class Account {
         return result;
     }
 
+    @Override
+    public int compareTo(Account o) {
+        return this.accountId - this.accountId;
+    }
 }

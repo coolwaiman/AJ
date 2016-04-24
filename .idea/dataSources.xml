@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1806553270">
+  <component name="DataSourceManagerImpl" format="xml" hash="242743609">
     <data-source source="LOCAL" name="MySQL - advdb@localhost" uuid="076566fe-4dfc-4ed4-9f4e-021c0ff6d9b9">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -21,7 +21,7 @@
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/src/hibernate.cfg.xml</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://ap-cdbr-azure-southeast-b.cloudapp.net:3306/ajdb</jdbc-url>
+      <jdbc-url>jdbc:mysql://redifelse.me:3306/advdb</jdbc-url>
       <explain-plan-config>
         <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
       </explain-plan-config>

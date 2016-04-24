@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Staff {
+public class Staff implements Comparable<Staff> {
     private int staffId;
     private String staffName;
     private String staffPhone;
@@ -87,5 +87,10 @@ public class Staff {
         result = 31 * result + (position != null ? position.hashCode() : 0);
         result = 31 * result + staffAccount.hashCode();
         return result;
+    }
+
+    @Override
+    public int compareTo(Staff o) {
+        return getStaffId() - o.getStaffId();
     }
 }

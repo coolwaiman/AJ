@@ -19,7 +19,8 @@ class Test {
 //        insertStaff();
 //        insertCustomer();
       //  testInsertOrder();
-        tryGetOrder();
+       // tryGetOrder();
+
     }
     private static void tryGetOrder() {
         Staff staff = StaffDAO.getByUsername("Raymond");

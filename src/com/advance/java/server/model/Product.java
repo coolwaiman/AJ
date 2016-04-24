@@ -7,7 +7,7 @@ import java.util.List;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Product {
+public class Product implements Comparable<Product> {
     private int productId;
     private String productName;
     private String productDescription;
@@ -117,5 +117,10 @@ public class Product {
         result = 31 * result + category.hashCode();
         result = 31 * result + provider.hashCode();
         return result;
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return productId - o.getProductId();
     }
 }

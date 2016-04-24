@@ -7,7 +7,7 @@ import java.util.List;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Provider {
+public class Provider implements Comparable<Provider> {
     private int providerId;
     private String providerName;
     private List<Product> products;
@@ -61,5 +61,10 @@ public class Provider {
         int result = providerId;
         result = 31 * result + (providerName != null ? providerName.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Provider o) {
+        return this.getProviderId() - o.getProviderId();
     }
 }
