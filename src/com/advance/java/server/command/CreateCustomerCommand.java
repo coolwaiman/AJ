@@ -14,7 +14,7 @@ import java.util.Calendar;
  * Created by User on 24/4/2016.
  */
 public class CreateCustomerCommand implements Command {
-    public static final String TAG = "cus";
+    public static final String TAG = "ccus";
 
     PortSession session = null;
 
@@ -29,7 +29,7 @@ public class CreateCustomerCommand implements Command {
         String inputStr;
 
         while (!isPassed) {
-            session.out.print("Enter Customer username");
+            session.out.println("Enter Customer username");
             inputStr = session.in.readLine();
             if (AccountDAO.getByUsername(inputStr) != null) {
                 session.out.print("Username taken. Try again.");
@@ -46,6 +46,11 @@ public class CreateCustomerCommand implements Command {
         a.setPasswd(inputStr);
         a.setBalance(0);
         a.setCreatedOn(new Timestamp(Calendar.getInstance().getTimeInMillis()));
+
+
+        session.out.print("Enter Customer name: ");
+        inputStr = session.in.readLine();
+        c.setCusName(inputStr);
 
         session.out.print("Enter Customer Address: ");
         inputStr = session.in.readLine();
@@ -85,7 +90,7 @@ public class CreateCustomerCommand implements Command {
 
     @Override
     public String getName() {
-        return session.getString("InitOrderCustomer");
+        return "CreateCustomerCommand";
     }
 
     @Override
