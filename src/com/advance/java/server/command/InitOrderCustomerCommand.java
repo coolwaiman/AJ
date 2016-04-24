@@ -1,5 +1,7 @@
 package com.advance.java.server.command;
 
+import com.advance.java.server.dao.CustomerDAO;
+import com.advance.java.server.model.Account;
 import com.advance.java.server.model.Customer;
 import com.advance.java.server.socket.PortSession;
 
@@ -18,41 +20,35 @@ public class InitOrderCustomerCommand implements Command {
     }
     @Override
     public void execute() throws IOException {
+        Account a = new Account();
         Customer c = new Customer();
-
-        session.out.print("Enter Customer Name: ");
-        String inputStr = session.in.readLine();
-        c.setCusName(inputStr);
-
-        session.out.print("Enter Customer Address: ");
-        inputStr = session.in.readLine();
-        c.setCusAddress(inputStr);
-
-        session.out.print("Enter Customer Email: ");
-        inputStr = session.in.readLine();
-        c.setCusEmail(inputStr);
-
-        session.out.print("Enter Customer Phone: ");
-        inputStr = session.in.readLine();
-        c.setCusPhone(inputStr);
-
-        session.out.print("Enter Customer Gender (M / F): ");
-        char gender = ' ';
-        while(true) {
-            inputStr = session.in.readLine();
-            inputStr = inputStr.toLowerCase();
-            if(inputStr.equals("m")){
-                gender = 'M';
-                break;
-            }else if(inputStr.equals("f")){
-                gender = 'F';
-                break;
-            }else{
-                session.out.print("Gender not Exist ( M / F ): ");
+        boolean isPassed = false;
+        session.out.print("Enter Customer username: (with \\id<cusId> can choose by id)) ");
+        String inputStr;
+        while (!isPassed) {
+            try {
+                inputStr = session.in.readLine();
+                if (inputStr.startsWith("\\id")) {
+                    c = CustomerDAO.getById(Integer.parseInt(inputStr.substring(3)));
+                    if(c == null) {
+                        session.out.print("Customer not exist. Try again.");
+                    } else {
+                        isPassed = true;
+                    }
+                } else {
+                    c = CustomerDAO.getByUsername(inputStr);
+                    if(c == null) {
+                        session.out.print("Customer not exist. Try again.");
+                    } else {
+                        isPassed = true;
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                session.out.println("Error, try again.");
+                session.out.print("Enter Customer username: (with \\id<cusId> can choose by id)) ");
             }
         }
-        c.setGender(gender);
-
         session.processingOrder.setCustomer(c);
 
         session.out.println("customer has been set");
