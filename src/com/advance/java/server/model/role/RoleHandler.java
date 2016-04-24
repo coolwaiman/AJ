@@ -24,11 +24,13 @@ public class RoleHandler {
         RoleFunction.get("HR Manager").put(ProductManageCommand.TAG, ProductManageCommand.class); //TODO: test code
         RoleFunction.get("HR Manager").put(PurchaseOrderCommand.TAG, PurchaseOrderCommand.class);//TODO: test code
         RoleFunction.get("HR Manager").put(CreateCustomerCommand.TAG, CreateCustomerCommand.class);//TODO: test code
+        RoleFunction.get("HR Manager").put(HRManageCommand.TAG, HRManageCommand.class);//TODO: test code
 
         RoleFunction.put("Store Manager", new HashMap<>());
         RoleFunction.get("Store Manager").put(ProductManageCommand.TAG, ProductManageCommand.class);
 
         RoleFunction.put("Stock Manager", new HashMap<>());
+        RoleFunction.get("Stock Manager").put(StockCommand.TAG, StockCommand.class);
 
         RoleFunction.put("Game Researcher", new HashMap<>());
         RoleFunction.get("Game Researcher").put(ProductManageCommand.TAG, ProductManageCommand.class);

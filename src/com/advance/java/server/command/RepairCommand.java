@@ -18,7 +18,7 @@ import java.util.*;
  * Created by Calvin on 23/4/2016.
  */
 public class RepairCommand implements Command  {
-    public static final String TAG = "repair";
+    public static final String TAG = "rep";
     private static final String TABLE_ROW_FORMAT = "%-10s  %-11s  %-11s  %-18s %-20s\n";
     PortSession session = null;
     private List<Productrepairwork> list;
