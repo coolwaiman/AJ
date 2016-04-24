@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Storestockwarning implements Serializable{
+public class Storestockwarning implements Serializable, Comparable<Storestockwarning>{
     private Store store;
     private Product product;
     private int warningLevel;
@@ -64,5 +64,11 @@ public class Storestockwarning implements Serializable{
         result = 31 * result + product.hashCode();
         result = 31 * result + warningLevel;
         return result;
+    }
+
+    public int compareTo(Storestockwarning o) {
+        if(store.compareTo(o.getStore())==0) {
+            return product.compareTo(o.getProduct());
+        } else return store.compareTo(o.getStore());
     }
 }

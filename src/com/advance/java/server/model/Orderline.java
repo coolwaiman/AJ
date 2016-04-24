@@ -12,7 +12,6 @@ public class Orderline implements Serializable, Comparable<Orderline> {
     private Storeproduct storeProduct;
     private double productPrice;
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "OrderId", nullable = false)
     public Cusorder getCusOrder() {

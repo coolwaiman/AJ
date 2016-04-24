@@ -7,7 +7,7 @@ import java.util.List;
  * Created by rAYMOND on 4/22/2016.
  */
 @Entity
-public class Store {
+public class Store implements Comparable<Store>{
     private int storeId;
     private String storeName;
     private String storeLocation;
@@ -87,5 +87,10 @@ public class Store {
         result = 31 * result + (storeLocation != null ? storeLocation.hashCode() : 0);
         result = 31 * result + (storeContact != null ? storeContact.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Store o) {
+        return this.getStoreId() - o.getStoreId();
     }
 }
